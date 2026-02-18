@@ -1,0 +1,337 @@
+App styling instructions
+
+>>Query parameters of URL opening by app webview
+The URL query parameters, including those for the app's starting page and subsequent webview pages, are stored in sessionStorage under the key name 'zenjupara'.
+When opening a new webview to browse a URL on the app's starting page, a separate webview controller is used, and the sessionStorage key name is 'zennjupara'.
+When a web page is loaded via the webview, the app injects a try call to the function zenappstart and the function zenapploadFinish, passing the webview language code,OS language code and query parameters as arguments.
+e.g., try{zenapploadFinish('ja','en','trust zenappro');}catch(err){};
+
+>>WebView cache prevention via time-based URL query parameters
+Append zenvtm=day as a URL query parameter for resolving it to zenvtm=[current date] automatically,
+Append zenvtm=hm as a URL query parameter for resolving it to zenvtm=[current date and hour] automatically,
+Append zenvtm=hms as a URL query parameter for resolving it to zenvtm=[current date, hour and minute] automatically
+Append zenvtm=ts as a URL query parameter for resolving it to zenvtm=[current DateTime] automatically
+e.g. index.html?zenvtm=day will automatically become index.html?zenvtm=20251225
+>>Language used on APP starting page
+Append zenvlzn=Y as a  URL query parameter of your app’s starting page and return device's current OS language code
+e.g. index.html?zenvlzn=Y will automatically become index.html?zenvlzn=ja 
+
+>>Top spacing of Playlist Menu Page
+Append zenmnsp=value_of_top_space_in_px [up to 150] as a URL query parameter of your app’s starting page to define the top spacing.
+e.g. index.html?zenmnsp=50
+Note - This setting can be configured in the APP Color section of MeowSixAPP.
+
+>>Background picture of Playlist Menu Page
+Append zenmnbg=Y as a the URL query parameter of your app’s starting page to enable the use of your custom background picture.
+e.g.
+index.html?zenmnbg=Y using indexmnbg.png as the background picture
+index.htm?zenmnbg=Y using indexmnbg.gif as the background picture  
+Note - This setting can be  configured in the APP Color section of MeowSixAPP.  
+
+>>Hiding Menu Icon Button on APP starting page
+Append zenbtnTop=X as a URL of APP starting page to hide Menu Icon Button on APP starting page
+
+
+
+>>Triggering dart-side code by JavaScript on APP starting page
+On your app’s starting page, you can use JavaScript to send postMessage data to the Dart-side code of your APP. For implementation details, please refer to the MeowSixAPP starting page. The channel name of PostMessage is zenappja.
+JavaScript example -
+    zenappja.postMessage(JSON.stringify(['zenopenmnja',"","zenwjson"]));
+-Open the app menu using a web page button that can be placed anywhere and used repeatedly.
+    the data structure is ['zenopenmnja',"","zenwjson"]
+
+-Open URLs in a new WebView [limited to one instance]
+ the data structure is  ["zennwebvw",["URL launching by webview","data",""],"zenwjson"]
+ This webview is initialized via a new WebView controller with the designated JavaScript channel name - zvappvwv.
+ JavaScript example -
+    zvappvwv.postMessage(JSON.stringify(['zenvlanaltr',"ja","zenwjson"]));
+    The channel only accepts postMessage data for switching languages, displaying Dart-code alerts, and copying data to the clipboard. Additionally, sending the data packet ['xbtn', '', 'zenwjson'] will close the WebView.
+        Append zenbartitle=[title] as a URL query parameter to add a custom title to the new webview, e.g. zenbartitle=ZENJudio.
+        Append zenrgb=[color] as a URL query parameter is set the background color of the title bar. Please use the format rgbXXXXXX (where XXXXXX is the six-digit hex code) instead of the standard #XXXXXX prefix.  Common color names such as red, blue, yellow, green, purple, brown, black, and white are also supported. e.g. zenrgb=blue
+       Append zenvlzn=Y as a URL query parameter to output related OS language code/webview language code to the browsing URL. e.g. zenvlzn=Y will automatically become zenvlzn=ja
+       Append xbtn=x  as a URL query parameter is to hide the default close button on the webview.
+       Use JavaScript to dynamically append xbtn=Y to the URL query parameter to close the WebView.
+       Append xbtn=s2  as a URL query parameter to display a black close icon on a white circular button. By default, the app uses a white close icon on a black background.
+       Append zenvdata=Y  as a URL query parameter to pass custom data strings to the browsing URL e.g. zenvdata=Y will automatically become zenvdata=data
+  -Dart-code alert showing [as infomation message]
+    The data structure is ['zenvalert',["Alert content","","Alert title/If no value, defined value in main.dart is used."],"zenwjson"]
+  -Data copying to clipboard
+    ["zenpaste",["Content for copying","","Information Title/Alert Title"],""]
+    To copy new audio data for adding to playlist, the data format is
+    ["zenmpaste",["audio_URL for copying","Message for data copied.","Information Title/Alert Title"],"zenwjson"]. Your app users can copy data in this format and paste it directly into the 'Audio Path' field within the 'Add Audio' form. 
+    Data structure of the audio_URL copying  is 
+   https:/your_server_URL/audio.mp3?audiotitle=audio_title&artwork=artwork_picture
+    The artwork picture must be hosted in the same directory as the corresponding audio file 
+  -Initial app data reseting
+    The data structure is ["zenrydata","zenjadatareinstall","zenwjson"]
+  -Language switching
+    ["zenvlanaltr","language code","zenwjson"]
+    default value 'os' for trying to get OS language code [relating to zenvlzn=Y mentioned above], 'zh-cn' for Simplified Chinese, zh-hk or zh-tw for Traditional Chinese or any code from IANA Language Subtag Registry. Language showing for your app’s Dart-side code requires the use of ARB files located in the lib/l10n directory. Conversely, any content within the WebView—such as the app’s starting page—must be controlled via your own JavaScript code. For implementation details, please refer to the main.dart file.
+  -Playlist data inserting
+    The data structure is
+      Structure of playlist data is
+      [array of audio data........,
+          ["playlist title",""],
+          "",
+          [["",""],["thumbnail URL","Y - allow to amend thumbnail URL"],""],
+          ["Y - allow to amend title","Y - allow to reorder","Y - allow to hide","Y - allow to delete","Y - allow to add audio"],
+          "accepted paths for audio adding",//use ; as value separator
+          ["Success Message for Inserting playlist data from APP starting page",
+            ["meowsixapp playlist id/datalistid","Signin needed by data"],
+            ["In hidden status","no need of playlist data sheet","audio list only"]
+          ]
+      ]
+      Note - The Success Message in the data is important.
+       Structure of audio data is
+        [
+          ["audio URL",
+            ["audio title",""],
+            "^artwork URL",
+            [["",""],["",""],""],
+            ["Y - allow to amend title","","Y - allow to reorder","Y - allow to hide","Y - allow to delete",""]
+          ],
+          "playlist title",
+          ["",
+            ["meowsixapp playlist id/datalistid","audio id/mpid"],
+            ["In hidden status","Y/Add - need of audio data sheet",""],
+            "Lyrics Data"
+          ]
+        ]
+       Structure of lyrics data is
+        [array of playback durations in seconds,array of Lyrics values]
+        e.g. [["2","10"],["Lyrics A for playing from start to 2s","Lyrics AA for from 2s to 10s/end"]]
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> Amend the URL of Playlist Thumbnail on your APP
+Adding zenmd=Y to the URL of Playlist Thumbnail is to allow APP users to amend the URL of Playlist Thumbnail on your APP.
+
+>> APP Content Structure
+Level 1) APP Starting Page [APP首頁]
+Level 2) Playlist Menu Page [播放列表選單頁]
+    Edit Playlist button
+> Level 3) List of Playlist Page [播放列表的列表頁]
+                              - Edit Icon button
+                                > Level 4) Playlist Editing Menu
+                                  - Edit Audio Data button
+                                    > Level 5) Audio List Page
+                                      - Add button
+                                        > Level 6) Audio Data Form Page
+                                          - Menu Icon [MeowSixAPP only]
+                                            > Audio Data Sample Menu
+                                      - Edit Icon button
+                                        > Level 6) Audio Editing Menu
+                                          - Amend Audio Data button
+                                            > Audio Data Form Page
+                                          - Delete Audio Data button
+                                          - Info button
+                                            > Information box
+                               - Audio Information button
+    [available if audio URL containing audioinfo=]
+    > Level 7) URL opened by new webview
+                                  - Amend Playlist Data button
+                                    > Level 5) Playlist Data Form Page
+                                  - Delete Playlist Data button
+                                  - Info button
+               > Information box
+    any 'Playlist button' on playlist list [under the Edit Playlist button]
+> Level 3) Audio Player Page
+                     - Audio Title Button below artwork area
+ [show SnackBar with audio title and playlist title]
+          - left-side playlist-play icon or ‘Playlist’ word
+     [open audio lists (at Level 4) with audio information buttons]
+     [audio information button showing only if audio URL
+              containing audioinfo=, refer to below section]
+     [open audio lists (at Level 4) with ‘Go to play’ button]
+ [When the playlist-play icon (on the left) is clicked, the top action button will transform into an Audio Information button, provided the active audio URL contains the audioinfo= parameter. Additionally, the title of the active audio will be highlighted in pink.]
+                     - playlist-play icon  (on the right) 
+          [Open the audio list to manage your tracks - you can hide or show specific items by their title and reorder the list using the drag-and-drop icon.]
+  [When the playlist-play icon (on the right),  the top action button will transform into an Audio Information button,  provided the active audio URL contains the audioinfo= parameter. Additionally, the title of the active audio will be highlighted in pink.]
+- Lyrics button
+[It operates in a toggle-shift mode. First click is to display the current and upcoming lyric sections, replacing the audio list. Second click is to display all lyric sections with highlighting the active lyric in red. Third click is to re-show the audio list.]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>> Adding webpage of audio information to Audio Edit Menu and Audio List [ playlist-play icon buttons on Audio Player Page]
+Append audioinfo= or audioinfo=thumbnail_picture as a URL query parameter of audio file. e.g. meowsix.mp3?audioinfo=meowsix.png. The webpage and its thumbnail picture must be hosted in the same directory as the audio file. In this example, the webpage is named meowsix.html. The thumbnail (meowsix.png) will appear in the 'Audio Edit Menu' and the 'Audio List' (accessed via the playlist-play icon) on the Audio Player Page. The 'Info' icon is automatically displayed whenever the audioinfo= parameter is present in the audio URL. To suppress the default close button, append xhtmlbtn=Y to the URL; however, you must then implement a custom close function within your target webpage. 
+Clicking the playlist-play icon [on the right] displays the audio list, highlighting the active track title in pink. However, if the sequence is reordered, the pink highlight remains fixed to the list position instead of moving with the specific audio track.
+
+The webpage of audio information is opened in a new WebView instance using the JavaScript channel name - zvappvwv. This is the same WebView controller triggered by the JavaScript on your app's Starting Page; please refer to the instructions below for implementation details.  
+
+>> Apply background pictures to APP pages  (relating to function_zenjuvpict() of main.dart)
+
+>>Showing background picture on Audio Player Page once playlist selected on the Playlist Menu Page
+    Either one of the followings -
+        > When using a thumbnail picture for a playlist, its filename needs to contain
+-plm. The corresponding page background will then automatically be retrieved by replacing -plm. with -plm2. in the same directory. For example, if the thumbnail URL is zenju-plm.png, the background image must be named zenju-plm2.png.
+        > When using a thumbnail picture for a playlist, the query parameter of file
+URL needs to contain zplayrp=Y. The corresponding page background will then automatically be retrieved by replacing . with -plm2. in the same directory. For example, if the thumbnail URL is zenju.png?zplayrp=Y, the background image must be named zenju-plm2.png.
+        > If a playlist thumbnail picture is used and background picture file is stored
+inside assets/zenp folder of APP, its path needs to contain
+'zplayrp=assets-zenp-picture filename' and the path of the background picture file is assets/zenp/picture filename. e.g. thumbnail URL is zenju.png?zplayrp=assets-zenp-zenju.png and background picture is at assets/zenp/zenju.png.
+> If a playlist thumbnail is being used and a specific background image is stored with it, the thumbnail's path must include the parameter zplayrp=[background_filename] (e.g., thumbnail.png?zplayrp=bg.jpg). 
+
+>>  Audio Player Page supporting dynamic background switching via its artwork URL parameter [each audio with specific artwork and background picture]
+     Same practices as the above background picture but use 'zplayarvk' instead of the 'zplayrp' and need to apply them to audio artwork URLs instead of the playlist thumbnail URL. The background picture specified in the playlist thumbnail data is displayed when the Audio Player Page first opens. Subsequently, the background dynamically switches based on the specific background data provided in each audio track's artwork URL parameter.
+     e.g. artwork_URL?zplayarvk=background_picture_of_Audio_Player_Page    
+    If you prefer not to display artwork, you may use zenjo-zenpo.png (a limpid placeholder image) as the artwork_URL value.. You may need to upload this file to your remote hosting server.
+     The artwork also serves as the thumbnail image alongside the track title on the Audio List Page. If you wish to use a custom thumbnail instead of the limpid placeholder (zenjo-zenpo.png), the artwork filename must include the suffix -zenjo-zenpo. For example, if your thumbnail is named zvp-zenpo.jpeg, the artwork value should be set to zvp-zenpo-zenjo-zenpo.jpeg, while the actual artwork file remains zenjo-zenpo.png.
+
+>> Background picture of Audio List Page [list of audios for a playlist],
+    Same related practice as the above background picture but use 'zaudioltp' instead of the 'zplayrp' and need to apply it to the thumbnail URL of the playlist.
+e.g. playlist_thumbnail_URL?zaudioltp=background_picture_Audio_List_Page
+   
+    Legible text over background picture
+    When the app is in Dark Mode (white text), specific overlays are automatically applied to the Audio List Page background image based on its filename. If the filename or path contains the strings rgba00001, rgba00002, npitb-, or rgba00003, a corresponding background overlay of rgba(0,0,0,0.1), 0.2, 0.2, or 0.3 is added to ensure text legibility.  When the app is in Light Mode (black text), specific overlays are automatically applied to the Audio List Page background image based on its filename. If the filename or path contains the strings rgba25501, rgba25502, npitb- and rgba25503, a corresponding background overlay of rgba(255,255,255,0.1), 0.2, 0.2, or 0.3 is added to ensure text legibility. The rgba(0,0,0,?) format represents black with an opacity of 0.1, 0.2, or 0.3, while rgba(255,255,255,?) represents white at those same levels. If you use the rgbatwo identifier followed by 01, 02, or 03, the corresponding overlay is applied in both Dark and Light modes. For example, using rgbatwo01, rgbatwo02, or rgbatwo03 ensures the background overlay adapts to the current theme.     
+Note  - the above method also applies to the background picture of Playlist Menu Page [for filename of the picture / APP starting page] and background picture of List of Playlist Page. It also applies to specific sample filenames of MeowSixAPP.
+
+>>Background picture of List of Playlist Page
+    It is the parameter zenplayvln on main.dart of APP code and you can configure it in the ‘APP Color’ section of MeowSixAPP.
+
+
+>>Adding rectangle picture [bar picture] to top area of Playlist Editing Menu
+    In the menu, this rectangular picture is positioned below the Playlist Title. Meanwhile, the Playlist Thumbnail and the Audio List Page background image are located within the bottom section of the interface.
+    Same related practice as the above background picture but use 'zpltp' instead of the 'zplayrp' and need to apply it to the thumbnail URL of the playlist.
+    e.g. thumbnail_URL [1 picture showing on the Menu]
+    e.g. thumbnail_URL?zpltp=bar_picture_at_top_of_Playlist_Editing_Menu [2 pictures showing on the Menu]
+    e.g. thumbnail_URL?zpltp=bar_picture_at_top_of_Playlist_Editing_Menu&zaudioltp=background_picture_Audio_List_Page [3 pictures showing on the Menu]
+
+>>Adding rectangle picture [bar picture] to top area of Audio Editing Menu
+     In the menu, this rectangular picture is positioned at the top area. Meanwhile, tthe background of the Audio player page and the artwork picture are located within the bottom section of the interface.
+    Same related practice as the above background picture but use 'audiotop' instead of the 'zplayrp' and need to apply it to the artwork URL of audio.
+    e.g. artwork_URL [1 pic showing on the Menu]
+    e.g. artwork_URL?audiotop=bar_picture_at_top_of_Audio_Editing_Menu [2 pics showing on the Menu]
+    e.g. artwork_URL?zplayarvk=background_picture_of_Audio_Player_Page&audiotop=bar_picture_at_top_of_Audio_Editing_Menu [3 pics showing on the Menu]
+
+
+>>Adding rectangle picture [bar picture] to top area of Lyrics Area
+    Same related practice as the above background picture but use 'lyra' instead of the 'zplayrp' and need to apply it to the artwork URL of audio.
+    e.g. artwork_URL?lyra=bar_picture_at_top_of_Lyrics_Area
+
+Summary -
+>playlist_thumbnail_pic_URL - 3 query parameters -
+zpltp=menu_bar_picture;
+zaudioltp=background_pic_of_Audio_List_Page;
+zplayrp=thumbnail_pic contains '-plm.'  (background_pic contains '-plm2.');
+(zplayrp=Y [player_background][-plm2.])
+(zplayrp=assets-zenp-picture_filename or
+  zplayrp=background_picture_filename)
+
+>artwork_URL - 3 parameters -
+audiotop=menu_bar_picture;
+zplayarvk=player_background_picture;
+lyra=player_lyrics_bar_picture;
+
+
+
+>>Three xml data files for app data recovery
+>Data structure of zenjappara.xml is -
+[[URL of APP starting page, APP package name,[APP name,’’],APP Description,APP version,"","",inserting space to Playlist Menu Page in px,"","zenjayi",position of APP menu button,app testing path,[Github account name,Github access token,’’]],Complete form data or not]
+The data above has been saved to the app's localStorage under the key zenjappara.
+If the relevant ZIP file has been extracted, you can find the file in the meowsixapp folder within the workspace mentioned in the 'AI Method' section of MeowSixAPP. 
+
+> zenjarydata.xml is structured as an array containing multiple sets of playlist data.
+Refer to data structure of playlist data mentioned above
+The above data has been saved to the app's localStorage 'zenaudioplist'.
+The zenjarydata.xml can be obtained by ‘Copying playlist data (zenjarydata.xml) to clipboard’ on the ‘Github Action Method’ section of MeowSixAPP.
+If the relevant ZIP file has been extracted, you can find the file in the assets folder within the workspace mentioned in the 'AI Method' section of MeowSixAPP. 
+
+>Data structure of zenrgbpara.xml is
+[Color data in terms of 32-bit hexadecimal color for dart-side use,Color data in terms of hex color for html-side use]
+Structure of the color data is 
+[
+    [Background color on background picture of Playlist Menu page,
+    Color opacity of the above color,
+    Dark/Light mode,
+    Color Scheme,
+    Using background picture of Playlist Menu Page or not
+    ],
+    [Color opacity of odd Item of list [Playlist Menu Page],
+    Color opacity of Even Item of list [Playlist Menu Page],
+    Color opacity of odd item of playlist,
+    Color opacity of even item of playlist,
+    Color opacity of odd item of audio list,
+    Color opacity of even item of audio list
+    ],
+    [
+        [Background picture of list of playlist page,Top padding(px) of Playlist Menu Page,
+        Parting line of top divider on Audio List Page,
+        Background color of audio title popup on Audio Player Page,
+        Color of repeat/shuffle icon of audio repeating/lyrics/shuffle button on Audio Player Page,
+        Color 2 of repeat/shuffle icon of audio repeating/shuffle button on Audio Player Page,
+        Color of word 「Playlist」 on Audio Player Page,
+        Background color of back button on Audio Player Page,
+        Color opacity of the above item
+        ],
+        [Background color of active audio button in playlist section of Audio Player Page,
+        Color opacity of the above item,
+        Title font color of active audio button in playlist section of Audio Player Page,
+        Font color of title of audio button on Audio Player Page,
+        Font color of audio timing display on Audio Player Page,
+        Background RGBA color of audio timing display on Audio Player Page [particular for using background picture only],
+        Color opacity of the above item,
+        Color of audio player track in active status,
+        Color of audio player track in inactive status,
+        Background RGBA color overlay to background picture of Audio Player Page [for using background picture only],
+        Color opacity of the above item
+        ]
+    ]
+]
+
+The part of above data has been saved to the app's localStorage 'zenrgbpara'.
+If the relevant ZIP file has been extracted, you can find the file in the meowsixapp folder within the workspace mentioned in the 'AI Method' section of MeowSixAPP.
+
+Note  - The three XML files mentioned above are located within the ZIP files generated by the 'AI Method' section of MeowSixAPP. To replace existing data in MeowSixAPP or the sample preview app, place these three files into their respective data folders before triggering the recovery function on the MeowSixAPP starting page or the data recovery function in the sample app.
+
+Default Title of dart-side alert and specific font type using in your APP
+You can change the default info in zenja/lib/main.dart at the beginning of the file. Alternatively, in the 'App Creation' section of MeowSixApp, you can add Info=alert_title to the App Description field to define your default alert title.
+To use a specific font in your app, add Info=alert_title###YourFont=font_name to the App Description field. The font filename must match the actual font name (e.g., font_name.ttf). If you want to use multiple fonts, you will need to use software to combine them into a single file.The font file needs to be in the assets/fonts folder  of your APP.  Alternatively, you will need to amend main.dart and pubspec.yaml without using font file combinations. Consider the impact on your app size when including font files.
+
+The additional parameter will not be used as the actual app description. If you enter It is a Piano Music APP. Info=Beauty Piano###YourFont=multifont, then 'It is a Piano Music APP' becomes your official description. 'Beauty Piano' replaces the default 'Info' as the alert title, and 'multifont' is the specific font name defined in your main.dart for use within the app.
+
+
+Important Note - The instructions provided above and all MeowSixAPP-related information are for reference purposes only.
