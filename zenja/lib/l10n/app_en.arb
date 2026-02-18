@@ -1,0 +1,364 @@
+{
+  "pTitleplMenuPage": "Music APP Creator",
+  "@pTitleplMenuPage": {
+    "description": "Page Title of Playlist Menu Page"
+  },
+  "editPlaylist": "Edit Playlist",
+  "@editPlaylist": {
+    "description": "Title of Edit Playlist button on Playlist Menu Page"
+  },
+  "alertNoPlaylist": "No playlist data existing. Navigate to the APP starting page to insert playlist data or reinstall initial playlist data.",
+  "@alertNoPlaylist": {
+    "description": "Alert content of no playlist data existing when tapping the Edit Playlist button on Playlist Menu Page."
+  },
+  "designAPPlaylist": "Design APP Playlist",
+  "@designAPPlaylist": {
+    "description": "Title of Design Playlist button on Playlist Menu Page"
+  },
+  "appCreation": "APP Creation",
+  "@appCreation": {
+    "description": "Title of APP Creation button on Playlist Menu Page"
+  },
+  "zenRGBpara": "APP Color",
+  "@zenRGBpara": {
+    "description": "Title of APP Color button on Playlist Menu Page"
+  },
+  "previewAPPStartPage": "Preview APP Starting Page",
+  "@previewAPPStartPage": {
+    "description": "Title of Preview APP Starting Page button on Playlist Menu Page"
+  },
+  "okZENJudio": "OK",
+  "@okZENJudio": {
+    "description": "Title of OK button of APP Alert"
+  },
+  "confirmZENJudio": "Confirmation",
+  "@confirmZENJudio": {
+    "description": "Title of APP Confirmation Alert"
+  },
+  "yZENJudio": "Yes",
+  "@yZENJudio": {
+    "description": "Title of OK button of APP Confirmation Alert"
+  },
+  "cancelAlert": "Cancel",
+  "@cancelAlert": {
+    "description": "Title of cancel button of APP Confirmation Alert"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "appPlaylistYrAPP": "APP Playlist",
+  "@appPlaylistYrAPP": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "amendPlaylistData": "Amend Playlist Data",
+  "@amendPlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by tapping  Playlist title on List of Playlist Page"
+  },
+  "deletePlaylistData": "Delete Playlist Data",
+  "@deletePlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by tapping  Playlist title on List of Playlist Page"
+  },
+  "toDeletePlaylist": "Do you want to delete this playlist?",
+  "@toDeletePlaylist": {
+    "description": "Button title on Playlist Editing Menu which is showed by tapping  Playlist title on List of Playlist Page"
+  },
+  "showHidePlaylistInfo": "You can insert playlist data to the APP on the APP Starting Page if the data is provided. For adding more audio data to a playlist, you can copy and paste audio data on the Page if the data is provided.\nTo show or hide a playlist, tap the 'Edit Playlist' button and then tap the playlist title.",
+  "@showHidePlaylistInfo": {
+    "description": "Information content of Info Icon Button on Playlist Editing Menu which is showed by tapping  Playlist title on List of Playlist Page or Info Icon Button on List of Playlists"
+  },
+  "copyPLinsertData": "Copy playlist inserting data",
+  "@copyPLinsertData": {
+    "description": "Copy button title of playlist inserting data on Playlist Edit Menu"
+  },
+  "copiedPLinsertData": "Data copied. [Using in inserting playlist data on the APP Starting Page]",
+  "@copyPLinsertData": {
+    "description": "Playlist inserting data was copied by copy button on Playlist Edit Menu"
+  },
+  "amendPlaylistDataYrAPP": "Amend Playlist Data",
+  "@amendPlaylistDataYrAPP": {
+    "description": "Page title of Playlist Data Form on Amend Status"
+  },
+  "addPlaylist": "Add Playlist",
+  "@addPlaylist": {
+    "description": "Page title of Playlist Data Form on Add Status"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Title of Save Icon Button on Playlist Data Form"
+  },
+  "playlistTitle": "Playlist Title *",
+  "@playlistTitle": {
+    "description": "Item of Playlist Data Form"
+  },
+  "validPlaylistTitle": "You need to enter value to the Playlist Title.",
+  "@validPlaylistTitle": {
+    "description": "Invalid result alert for item of Playlist Data Form"
+  },
+  "urlPlaylistThumbnail": "URL of Playlist Thumbnail",
+  "@urlPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+  "hintPlaylistThumbnail": "To add a thumbnail to a playlist title, use 'assets/' as a prefix (e.g., assets/zenju.png) for images bundled within the app. Then, follow the file placement instructions in the APP Creation section. If an internet-stored picture is used, enter its URL, (e.g. https://www.???????.app/zenju.png) as the value.\nTo allow app users to edit this item, append ?zenmd=Y as a query parameter to the URL.",
+  "@hintPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+  "invalidThumbnailPath": "Invalid path value. Use https:// or http:// as a prefix for internet-stored files, or assets/ for files bundled within the app.",
+  "@invalidThumbnailPath": {
+    "description": "Item of Playlist Data Form"
+  },
+  "insertImproperDataStructrue": "Inserting Data Error - Improper Data Structrue.",
+  "@insertImproperDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+
+  "insertImproperAudioDataStructrue": "Inserting Data Error - Improper Audio Data Structure.",
+  "@insertImproperAudioDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperStructrueAudioData": "Inserting Data Error - Improper Structure of Audio Data.",
+  "@insertImproperStructrueAudioData": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperDataType": "Inserting Data Error - Improper Data Type.",
+  "@insertImproperDataType": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "restartAPP": "Provided data reinstalled. Restart the app to continue.",
+  "@restartAPP": {
+    "description": "Request to restart app after backup data reinstall."
+  },
+  "reinstalledData": "Data reinstalled.",
+  "@rreinstalledData": {
+    "description": "Alert Message after backup data reinstall."
+  },
+  "relxmlnotindatafolder": "The following required files were not found in the app's external data folder (e.g. com.zenapproai.meowsixapp/files)  - zenjarydata.xml (playlist data), zenjappara.xml (app creation parameters), or zenrgbpara.xml (color styles of app).",
+  "@relxmlnotindatafolder": {
+    "description": "data xml file not found when backup data reinstallation."
+  },
+  "showHideAudioInfo": "To show and hide audio in the playlist, tap the audio title.\nThe 'Amend Audio Data' option will only appear when you click the edit icon on the 'Audio List' and the audio data is editable.\nTo add audio to the playlist (if allowed), tap the 'Add' button on this page.",
+  "@showHideAudioInfo": {
+    "description": "Information content of Info Icon Button on Audio Editing Menu which is showed by tapping  Audio title on Audio List Page or Info Icon Button on Audio List"
+  },
+  "audioDataYrAPP": "Audio Data",
+  "@audioDataYrAPP": {
+    "description": "Title of Audio List Page"
+  },
+  "amendAudiobtnData": "Amend Audio Data",
+  "@amendAudiobtnData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "deleteAudioData": "Delete Audio Data",
+  "@deleteAudioData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "wantodeleteAudioData": "Do you want to delete this audio data?",
+  "@wantodeleteAudioData": {
+    "description": "Confirmation Box when tapping  Delete Audio Data Button on Audio Editing Menu"
+  },
+  "audioInfo": "Audio Info",
+  "@audioInfo": {
+    "description": "Audio Info Button on Audio Editing Menu"
+  },
+  "amendAudioDataYrAPP": "Amend Audio Data",
+  "@amendAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "addAudioDataYrAPP": "Add Audio Data",
+  "@addAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "audioTitle": "Audio Title *",
+  "@audioTitle": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioTitle": "You need to enter value to the Audio Title.",
+  "@invalidAudioTitle": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  }, 
+  "invalidPathmp": "Invalid path value. Only accept path value using https:// or http:// for internet-stored audio file",
+  "@invalidPathmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidPathnmp": " or asset:///assets/ for audio file bundled with the app",
+  "@invalidPathnmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserAudioPath": "Enter a valid URL starting with https:// or http:// for an internet-stored audio file (e.g. http://www.??????.com/zenju.mp3?audioinfo=meowapp1.jpg&xhtmlbtn=Y). The audioinfo query parameter specifies adding web page associated with the the audio.",
+  "@hinuserAudioPath": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "artworkFilename": "Artwork filename *",
+  "@artworkFilename": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidArtworkPath": "Enter image file path.\nTo use the same filename as the audio, enter only the image file extension (e.g., .png or .jpeg). For example, audio filename is zenmeow.mp3, artwork filename is zenmeow.png and this item value is .png.",
+  "@invalidArtworkPath": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomAudio": "Invalid path. Only files from the same domain as the audio file are accepted.",
+  "@invalidArtPSamedomAudio": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomnRoot": "Invalid path. Only files from the following locations are accepted.\nOnly files from the same domain as the audio file\nroot level / ‘zenp’ named folder of app assets folder\nasset:///assets/ (for file bundled within the app)",
+  "@invalidArtPSamedomnRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPhttpRoot": "Invalid path. Use https:// or http:// [internet-stored file], root level / ‘zenp’ named folder of asset folder or asset:///assets/ [file bundled within the app].",
+  "@invalidArtPhttpRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserArtPath": "Only files from the same domain as the audio file and use https:// or http://.",
+  "@hintuserArtPath": {
+    "description": "Note of Audio Data Form Page"
+  },
+  "allowAmendAudioTitle": "Allow to amend this audio title",
+  "@allowAmendAudioTitle": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowAlterAudioSequence": "Allow the sequence of the audio list to be changed in the reorderable section for this playlist",
+  "@allowAlterAudioSequence": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowHideAudio": "Allow app users to hide this item from the playlist’s audio list",
+  "@allowHideAudio": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintPLAudallowHide": "To hide and show data of audio and playlist are available in the user part of this MeowSixAPP and your app. These functions are currently unavailable in the design section of this MeowSixAPP.",
+  "@hintPLAudallowHide": {
+    "description": "Item of Playlist Data Form"
+  },
+  "zenvlyrics": "Lyrics Data",
+  "@zenvlyrics": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "invalidLyricdata": "The structure of inputted data value is improper according to the item hint.",
+  "@invalidLyricdata": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "hintYLntoAudioDataLyrics": "The lyrics data structure is playback duration in second###content of lyrics for the duration. All lyrics data must follow this pattern repeatedly. e.g 2###Lyrics A###6###Lyrics AA###18###Lyrics AAA.\nThe playback duration in seconds refers to the total playback time during which the lyrics appear.\nCopying and pasting value of lyrics data for app user will be provided on the APP Starting Page if necessary.",
+  "@hintYLntoAudioDataLyrics": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "dataLyricsT": "Data",
+  "@dataLyricsT": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "reminderToSaveForm": "Tap the data saving button if any changes of lyric data.",
+  "@reminderToSaveForm": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "confirmDataAudioDel": "Confirmation message of deletion of audio data.",
+  "@confirmDataAudioDel": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintuserYLntoAudioDataDel": "Note - Enter Y for using default message of deletion confirmation box or any value to this item.\nIf adding [Ln] to this message value, the [Ln] is replaced by the default message.",
+  "@hintYLntoAudioDataDel": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "audioDataSaved": "Audio Data Saved.",
+  "@audioDataSaved": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "saveAudioForm": "Save",
+  "@saveAudioForm": {
+    "description": "Title of Data Saving Button of Audio Data Form Page"
+  },
+  "needDesignAudioData": "Audio data needs to be designed.",
+  "@needDesignAudioData": {
+    "description": "Initial audio data"
+  },
+  "initialDataAudioData": "Audio Data",
+  "@initialDataAudioData": {
+    "description": "Initial audio data"
+  },
+  "sampleAudioData": "Sample",
+  "@sampleAudioData": {
+    "description": "Audio data Sample"
+  },
+  "allDataHided": "All audio data in this playlist are hidden.",
+  "@allDataHided": {
+    "description": "Initial audio data"
+  },
+  "noAudioDataExisting": "No audio data were found in this playlist.",
+  "@noAudioDataExisting": {
+    "description": "Initial audio data"
+  },
+  "audioPath": "Path of audio file  *",
+  "@audioPath": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioPathHttp": "Use https:// or http:// for internet-stored audio file.",
+  "@invalidAudioPathHttp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidAudioPathPackin": " or asset:///assets/ for audio file bundled within app.",
+  "@invalidAudioPathPackin": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "addAudio": "Add",
+  "@addAudio": {
+    "description": "Title of Add Audio Button on the Audio List Page"
+  },
+  "editAudioData": "Edit Audio Data",
+  "@editAudioData": {
+    "description": "Button title of Playlist Editing Menu which is showed by tapping  Edit Icon Button of Audio List on Audio List Page"
+  },
+  "viewAudioData": "View Audio Data",
+  "@viewAudioData": {
+    "description": "Same button position as the above but button of View Audio Data [only show audio list] instead of button of Edit Audio Data [including edit and/or delete audio data]. "
+  },
+  "playlistPlayer": "Playlist",
+  "@playlistPlayer": {
+    "description": "Title 'Playlist' on Audio Player Page"
+  },
+  "lyricsPlayer": "Lyrics",
+  "@lyricsPlayer": {
+    "description": "Title 'Lyrics' on Audio Player Page"
+  },
+  "playlistDataSaved": "Playlist data saved.",
+  "@playlistDataSaved": {
+    "description": "Note of Playlist Data Form"
+  },
+  "eg": "e.g. ",
+  "@eg": {
+    "description": "Alert text"
+  },
+  "or": "or ",
+  "@or": {
+    "description": "Note text"
+  },
+  "hint": "Hint",
+  "@hint": {
+    "description": "Hint text"
+  },
+  "xmlCopytoClipboard": "Copied to Clipboard.",
+  "@xmlCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "audioCopytoClipboard": "Audio data copied to Clipboard. Paste it to related audio path item and save it on Audio Adding Form.",
+  "@audioCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "recoveryData": "Do you want to reset the app to its initial state? This will replace all existing data. ",
+  "@recoveryData": {
+    "description": "Recovery Data on APP Starting Page"
+  },
+  "retrvData": "Do you place zenjarydata.xml, zenjappara.xml and/or zenrgbpara.xml into the app data folder  (e.g., com.zenapproai.meowsixapp/files)  and want to retrieve their data? This action will replace all existing data.\nNote - This data retrieving function is not available in your app.",
+  "@retrvData": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "retrvDatatln": "Reset the app data by loading data files",
+  "@retrvDatatln": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "alertNoPlaylistZENJu": "No playlist data existing. Tap 'Design app playlist' to add playlist data for your app.",
+  "@alertNoPlaylistZENJu": {
+    "description": "Alert content of no playlist data existing when tapping the Edit Playlist button on the Playlist Menu Page."
+  },
+  "meowsixapp": "MeowSixAPP",
+  "@meowsixapp": {
+    "description": "MeowSixAPP"
+  }
+
+}

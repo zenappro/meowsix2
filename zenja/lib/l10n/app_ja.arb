@@ -1,0 +1,364 @@
+{
+  "pTitleplMenuPage": "音楽APP作成ツール",
+  "@pTitleplMenuPage": {
+    "description": "Page Title of Playlist Menu Page"
+  },
+  "editPlaylist": "APP Playlist編集",
+  "@editPlaylist": {
+    "description": "Title of Edit Playlist button on Playlist Menu Page"
+  },
+  "alertNoPlaylist": "プレイリスト「Playlist」データが存在しません。アプリ「APP」 のホームページにアクセスして「Playlist」データを挿入するか、初期データを再読み込みしてください。",
+  "@alertNoPlaylist": {
+    "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
+  },
+  "designAPPlaylist": "APP Playlistのデザイン",
+  "@designAPPlaylist": {
+    "description": "Title of Design Playlist button on Playlist Menu Page"
+  },
+  "appCreation": "APPの製造",
+  "@appCreation": {
+    "description": "Title of APP Creation button on Playlist Menu Page"
+  },
+  "zenRGBpara": "APPの色",
+  "@zenRGBpara": {
+    "description": "Title of APP Color button on Playlist Menu Page"
+  },
+  "previewAPPStartPage": "APPホームページのプレビュー",
+  "@previewAPPStartPage": {
+    "description": "Title of Preview APP Starting Page button on Playlist Menu Page"
+  },
+  "okZENJudio": "OK",
+  "@okZENJudio": {
+    "description": "Title of OK button of APP Alert"
+  },
+  "confirmZENJudio": "確認",
+  "@confirmZENJudio": {
+    "description": "Title of APP Confirmation Alert"
+  },
+  "yZENJudio": "はい",
+  "@yZENJudio": {
+    "description": "Title of OK button of APP Confirmation Alert"
+  },
+  "cancelAlert": "取り消す",
+  "@cancelAlert": {
+    "description": "Title of cancel button of APP Confirmation Alert"
+  },
+  "add": "追加",
+  "@add": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "appPlaylistYrAPP": "APPのPlaylist",
+  "@appPlaylistYrAPP": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "amendPlaylistData": "Playlistデータの改変",
+  "@amendPlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "deletePlaylistData": "Playlistの削除",
+  "@deletePlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "toDeletePlaylist": "「Playlist」を削除しますか?",
+  "@toDeletePlaylist": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "showHidePlaylistInfo": "APPのホームページに「Playlist」データが提供されている場合は、そのデータを新しいプレイリストに挿入できます。APPのホームページにコピー＆ペースト用の音声データが提供されている場合は、「Playlist」に音声データを追加できます。「Playlistトを編集」とプレイリストのタイトルをクリックすると、「Playlist」の表示と非表示を切り替えることができます。",
+  "@showHidePlaylistInfo": {
+    "description": "Information content of Info Icon Button on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page or Info Icon Button on List of Playlists"
+  },
+  "copyPLinsertData": "'Playlist挿入データ' をコピー",
+  "@copyPLinsertData": {
+    "description": "Copy button title of playlist inserting data on Playlist Edit Menu"
+  },
+  "copiedPLinsertData": "コピーされました。 [APPのホームページに「Playlis」を表示するために使用するデータを挿入します。]",
+  "@copyPLinsertData": {
+    "description": "Playlist inserting data was copied by copy button on Playlist Edit Menu"
+  },
+  "amendPlaylistDataYrAPP": "Playlistデータの改変",
+  "@amendPlaylistDataYrAPP": {
+    "description": "Page title of Playlist Data Form on Amend Status"
+  },
+  "addPlaylist": "Playlistの追加",
+  "@addPlaylist": {
+    "description": "Page title of Playlist Data Form on Add Status"
+  },
+  "save": "保存",
+  "@save": {
+    "description": "Title of Save Icon Button on Playlist Data Form"
+  },
+  "playlistTitle": "Playlistの標題 *",
+  "@playlistTitle": {
+    "description": "Item of Playlist Data Form"
+  },
+  "validPlaylistTitle": "必要塡值到プレイリスト 「Playlist」の標題。",
+  "@validPlaylistTitle": {
+    "description": "Invalid result alert for item of Playlist Data Form"
+  },
+  "urlPlaylistThumbnail": "Playlistの縮圖 URL",
+  "@urlPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+"hintPlaylistThumbnail": "プレイリスト 「Playlist」のタイトルにサムネイル画像を追加できます。APP にパッケージ化された画像の場合、この値の接頭辞として「assets/」が必要です,例:assets/zenju.png。「APP 生成ガイドライン」に従って、関連するファイルの場所の配置を実行します。ファイルがインターネット上に保存されている場合は、このファイルの URL を入力する必要があります (例: https://www.?????????.app/zenju.png)。\n URL パラメータに zenmd=Y を追加すると、APP ユーザーはこのデータを変更できます。",
+  "@hintPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+  "invalidThumbnailPath": "パスが無効です。オンラインファイルの場合は https:// または http:// を、APPにパッケージ化されたファイルの場合は assets/ をプレフィックスとして使用してください。",
+  "@invalidThumbnailPath": {
+    "description": "Item of Playlist Data Form"
+  },
+  "insertImproperDataStructrue": "データ挿入エラー （不適切なデータ構造）",
+  "@insertImproperDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+
+  "insertImproperAudioDataStructrue": "データ挿入エラー （音声データ構造エラー）",
+  "@insertImproperAudioDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperStructrueAudioData": "データ挿入エラー （不適切な音声データ構造）",
+  "@insertImproperStructrueAudioData": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperDataType": "データ挿入エラー （不適切なデータ型)",
+  "@insertImproperDataType": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "restartAPP": "提供されたデータは再インストールされました。このAPPを再起動する必要があります。",
+  "@restartAPP": {
+    "description": "Request to restart APP after backup data reinstall."
+  },
+  "reinstalledData": "データが再インストールされました。",
+  "@rreinstalledData": {
+    "description": "Alert Message after backup data reinstall."
+  },
+  "relxmlnotindatafolder": "このAPPの外部データフォルダ  (例, com.zenapproai.meosixapp/files)  には、「Playlist」データ用の zenjarydata.xml、アプリ作成パラメータ用の zenjappara.xml、APPカラー用の zenrgbpara.xml が見つかりませんでした。",
+  "@relxmlnotindatafolder": {
+    "description": "data xml file not found when backup data reinstallation."
+  },
+  "showHideAudioInfo": "音声 リスト 「Audio リスト」内の音声 ファイルの表示/非表示を切り替えるには、任意の音声 タイトルをクリックします。\n「音声 データの変更」オプションは、「音声 リスト」の編集ボタンをクリックし、音声データが編集可能な場合にのみ表示されます。\n「音声 リスト」に音声を追加できる場合は、このページの「追加」ボタンをクリックします。",
+  "@showHideAudioInfo": {
+    "description": "Information content of Info Icon Button on Audio Editing Menu which is showed by clicking Audio title on Audio List Page or Info Icon Button on Audio List"
+  },
+  "audioDataYrAPP": "音声データ",
+  "@audioDataYrAPP": {
+    "description": "Title of Audio List Page"
+  },
+  "amendAudiobtnData": "音声データの改変",
+  "@amendAudiobtnData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "deleteAudioData": "音声データの削除",
+  "@deleteAudioData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "wantodeleteAudioData": "この音声データを削除する必要がありますか?",
+  "@wantodeleteAudioData": {
+    "description": "Confirmation Box when clicking Delete Audio Data Button on Audio Editing Menu"
+  },
+  "audioInfo": "音声詳細",
+  "@audioInfo": {
+    "description": "Audio Info Button on Audio Editing Menu"
+  },
+  "amendAudioDataYrAPP": "音声データの改変",
+  "@amendAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "addAudioDataYrAPP": "音声データの追加",
+  "@addAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "audioTitle": "音声タイトル*",
+  "@audioTitle": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioTitle": "音声のタイトルを入力する必要があります。",
+  "@invalidAudioTitle": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidPathmp": "無効なパスです，ネットワーク 音声ファイルのプレフィックス値として使用できるのは https:// または http:// のみです。",
+  "@invalidPathmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidPathnmp": " または、APP にパッケージ化された音声 ファイルには、asset:///assets/ を使用します",
+  "@invalidPathnmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserAudioPath": "ネットワーク ファイルのプレフィックス値として https:// または http:// を使用するか (たとえば、http://www.??????.com/zenju.mp3?audioinfo=meowapp1.jpg&xhtmlbtn=Y)。audioinfo パラメータは、音声の追加に関する Web ページ用です。",
+  "@hintuserAudioPath": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "artworkFilename": "Artworkのファイル名*",
+  "@artworkFilename": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidArtworkPath": "画像ファイルのパスのみを入力するか、音声ファイル名と同じファイル名を使用する場合は、画像ファイルの拡張子のみを入力してください (例: .png または .jpeg)。つまり、音声ファイル名は zenmeow.mp3 、アートワーク (Artwork) ファイル名は zenmeow.png です。この項目には .png のみを入力してください。",
+  "@invalidArtworkPath": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomAudio": "無効なパスです,ネットワーク 音声 ファイルと同じドメイン名のみを受け入れます。",
+  "@invalidArtPSamedomAudio": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomnRoot": "パス値が無効です。パスプレフィックス値には、次のいずれかのみを指定できます:\nオンライン音声ファイルと同じドメイン名\nAPPのアセットフォルダまたはzenpフォルダのルートディレクトリ\nasse:///assets/ [APPに同梱されているファイルを使用]",
+  "@invalidArtPSamedomnRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPhttpRoot": "パスが無効です。ネットワークファイル（https:// または http:// をプレフィックスとして指定）、またはアプリのアセットフォルダまたは zenp フォルダのルートディレクトリを使用してください。アプリに同梱されているファイルを使用する場合は、asset:///assets/ と入力してください。",
+  "@invalidArtPhttpRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserArtPath": "オンライン音声ファイルと同じドメインのパス値を使用してください。パスのプレフィックスは https:// または http:// である必要があります。",
+  "@hintuserArtPath": {
+    "description": "Note of Audio Data Form Page"
+  },
+  "allowAmendAudioTitle": "音声のタイトルを変更できるようにする",
+  "@allowAmendAudioTitle": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowAlterAudioSequence": "このPlaylistの音声データリストの並べ替え可能な部分の順序を変更できるようにします",
+  "@allowAlterAudioSequence": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowHideAudio": "Playlistの音声データ リストで音声データを非表示にできるようにします",
+  "@allowHideAudio": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintPLAudallowHide": "関連する「Playlist」や音声データを非表示にしたり表示したりする機能は、MeowSixAPP のユーザー部分と独自のAPP内でのみ使用できます。MeowSixAPP のデザイン部分では使用できません。",
+  "@hintPLAudallowHide": {
+    "description": "Item of Playlist Data Form"
+  },
+  "zenvlyrics": "歌詞データ",
+  "@zenvlyrics": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "invalidLyricdata": "データ値の構造が正しくありません。この項目のプロンプトを参照してください。",
+  "@invalidLyricdata": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "hintYLntoAudioDataLyrics": "歌詞 (Lyrics)データ構造は、指定された再生時間（秒）内の歌詞コンテンツです。この構造は必須です。歌詞データを繰り返し、###を使用してデータグループを連結します（例：2###Lyrics A###6###Lyrics AA###18###Lyrics AAA）。\n再生時間（秒）は、歌詞が表示されるまでの再生時間（秒）です。\n必要に応じて、APPユーザーが利用できるクリッピングデータがAPPのホームページで提供されます。",
+  "@hintYLntoAudioDataLyrics": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "dataLyricsT": "データ",
+  "@dataLyricsT": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "reminderToSaveForm": "歌詞データが変更された場合は、テーブル内の「保存」ボタンをクリックする必要があります。",
+  "@reminderToSaveForm": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "confirmDataAudioDel": "音声データ削除の確認メッセージ",
+  "@confirmDataAudioDel": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintuserYLntoAudioDataDel": "注 - 「削除確認ダイアログ」フィールドで「Y」と入力すると、デフォルト値を使用するか任意の値を使用できます。このメッセージに[Ln]を追加すると、デフォルト値に置き換えられます。",
+  "@hintYLntoAudioDataDel": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "audioDataSaved": "音声データが保存されました。",
+  "@audioDataSaved": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "saveAudioForm": "保存",
+  "@saveAudioForm": {
+    "description": "Title of Data Saving Button of Audio Data Form Page"
+  },
+  "needDesignAudioData": "音声データを設計する必要があります。",
+  "@needDesignAudioData": {
+    "description": "Initial audio data"
+  },
+  "initialDataAudioData": "音声データ",
+  "@initialDataAudioData": {
+    "description": "Initial audio data"
+  },
+  "sampleAudioData": "サンプル",
+  "@sampleAudioData": {
+    "description": "Audio data Sample"
+  },
+  "allDataHided": "このPlaylist内のすべての音声 データが非表示になっています。",
+  "@allDataHided": {
+    "description": "Initial audio data"
+  },
+  "noAudioDataExisting": "このPlaylistには音声データがありません。",
+  "@noAudioDataExisting": {
+    "description": "Initial audio data"
+  },
+  "audioPath": "音声ファイルのパス*",
+  "@audioPath": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioPathHttp": "ネットワーク音声ファイルパスのプレフィックス値として https:// または http:// を使用してください。",
+  "@invalidAudioPathHttp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidAudioPathPackin": " または、APP と一緒にパッケージ化された音声ファイルの場合は、asset:///assets/ と入力します。 ",
+  "@invalidAudioPathPackin": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "addAudio": "追加",
+  "@addAudio": {
+    "description": "Title of Add Audio Button on Audio List Page"
+  },
+  "editAudioData": "音声データの編集",
+  "@editAudioData": {
+    "description": "Button title of Playlist Editing Menu which is showed by clicking Edit Icon Button of Audio List on Audio List Page"
+  },
+  "viewAudioData": "音声データの閲覧",
+  "@viewAudioData": {
+    "description": "Same button position as the above but button of View Audio Data [only show audio list] instead of button of Edit Audio Data [including edit and/or delete audio data]. "
+  },
+  "playlistPlayer": "Playlist",
+  "@playlistPlayer": {
+    "description": "Title 'Playlist' on Audio Player Page"
+  },
+  "lyricsPlayer": "歌詞",
+  "@lyricsPlayer": {
+    "description": "Title 'Lyrics' on Audio Player Page"
+  },
+  "playlistDataSaved": "Playlistデータが保存されました。",
+  "@playlistDataSaved": {
+    "description": "Note of Playlist Data Form"
+  },
+  "eg": "例： ",
+  "@eg": {
+    "description": "Alert text"
+  },
+  "or": "/ ",
+  "@or": {
+    "description": "Note text"
+  },
+  "hint": "ヒント",
+  "@hint": {
+    "description": "Hint text"
+  },
+  "xmlCopytoClipboard": "クリップボードにコピーされました。",
+  "@xmlCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "audioCopytoClipboard": "音声データはクリップボードにコピーされました。該当する音声パスのテーブル項目に貼り付けて、音声を追加し、データを保存してください。",
+  "@audioCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "recoveryData": "すべてのAPPの既存のデータを置き換えるために、APPを初期データにリセットしますか?",
+  "@recoveryData": {
+    "description": "Recovery Data on APP Starting Page"
+  },
+  "retrvData": "データを取得し、関連するすべてのアプリの既存のデータを置き換えるために、zenjarydata.xml、zenjappara.xml、および/またはzenrgbpara.xml ファイルをこのアプリ データ フォルダー (例, com.zenapproai.meowsixapp/files) に配置しましたか?\n注意 - このデータ取得機能はAPPには存在しません。",
+  "@retrvData": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "retrvDatatln": "ファイル読み込みでデータをリセット",
+  "@retrvDatatln": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "alertNoPlaylistZENJu": "「Playlist」データがありません。Playlist データを APP に追加するには、「APP Playlistのデザイン」をクリックする必要があります。",
+  "@alertNoPlaylistZENJu": {
+    "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
+  },
+  "meowsixapp": "MeowSixAPP [jp]",
+  "@meowsixapp": {
+    "description": "MeowSixAPP"
+  }
+
+}

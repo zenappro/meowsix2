@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><!--CSPw!--><!--CSPZENAPP!--><meta name="format-detection" content="telephone=no"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover"> <title></title> 	<link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-grid.min.css"><link rel="stylesheet" href="css/animatemin.css"><style>html, body {height: 100%;margin: 0;padding: 0;}@media screen and (min-width: 1024px) {body {font-size: 30.5px;};a {font-size: 30.5px;};}@media screen and (min-width: 760px) {body {font-size: 15.5px;};a {font-size: 15.5px;};}.zenhtmltxt {text-align:left;overflow-wrap: break-word;background-color:rgba(255,255,255,0.8);font-weight: bold;}</style><script src="js/jquery-3.6.0.min.js"></script></head><body style="background-image: url('meowapp1.jpg');background-repeat: no-repeat;background-position: center;background-size: cover;"> 
+<div style="height:100%;width:100%;position: relative;">
+<a id="zenjscodeopen" class="btn" style="position:absolute;left:50%;bottom:8px;transform: translateX(-50%);background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&lt;/&gt; <span id="zbx"></span></a>
+<div id="zenjscode" class="container text-center" style="visibility: hidden;height:92%;overflow-x:hidden;overflow-y:auto;background-color:rgba(255,255,255,0.5);padding:5px;">
+  <div class="row"><div class="col"><a class="btn" id="zenyropen" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;color: white;" href="#">&#9654;</a></div><div class="col"><a id="zenyropenr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenyropenrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenyropen" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenyropenhtml" class="zenhtmltxt">
+    $(document).on("click", '#open_menu_by_webview_button',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(['zenopenmnja',"","zenwjson"]));
+    });
+  </div></div>
+  <br>
+
+  <div class="row"><div class="col"><a class="btn" id="zeninsertdata" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;color: white;" href="#">&plus;&#9776;</a></div><div class="col"><a id="zeninsertdatar" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zeninsertdatarp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zeninsertdata" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zeninsertdatahtml" class="zenhtmltxt">
+    $(document).on("click", '#insert_playlist_data_to_player',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(['zeninsertplays',[[[["asset:///assets/zenja-zpio.mp3",["zenja-zpio.mp3",""],"meowapp1.jpg",[["",""],["",""],""],["Y","","Y","Y","Y",""]],"ZENPlaylist",["",["",""],["","",""],[["2","10"],["LyricsA","LyricsAA"]]]]],["ZENPlaylist1",""],"",[["",""],["zennja-zenpo.png",""],""],["Y","Y","Y","Y","Y"],"",["ZENJUDIO Playlist Inserted!",["",""],["","",""]]],"zenwjson"]));  
+    });
+  </div></div>
+  <br>
+  
+  <div class="row"><div class="col"><a class="btn" id="zenvalrt" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;color: white;" href="#">!</a></div><div class="col"><a id="zenvalrtr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvalrtrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvalrt" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenvalrthtml" class="zenhtmltxt">
+    $(document).on("click", '#open_native_alert',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(['zenvalert',["MEOW MEOW","","MEOWSIXAPP"],"zenwjson"]));
+    });
+  </div></div>
+  <br>
+  
+  <div class="row"><div class="col"><a class="btn" id="zenpaste" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;" href="#">&#128203;</a></div><div class="col"><a id="zenpaster" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenpasterp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenpaste" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenpastehtml" class="zenhtmltxt">
+    $(document).on("click", '#copy_text_to_clipboard',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(["zenpaste",["Content","",""],""]));
+    });
+  </div></div>
+  <br>
+  
+  <div class="row"><div class="col"><a class="btn" id="zenmpaste" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;color:red;" href="#">&#9836;&#128203;</a></div><div class="col"><a id="zenmpaster" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenmpasterp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenmpaste" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenpastehtml" class="zenhtmltxt">
+    $(document).on("click", '#copy_mp3_data_to_clipboard_for_user_to_add_audio_to_playlist',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(["zenmpaste",["https://meowsixapp.github.io/zenmp/zennja-zpio.mp3?audiotitle=MeowSixZenpo&artwork=piatb-zenpo.jpeg","Audio data was copied to clipborad.\nYou need to click 'Edit Playlist' > click a playlist > click 'Add' > paste it to audio path item > save data","MeowMeow"],""]));
+    });
+  </div></div>
+  <br>
+
+  <div class="row"><div class="col"><a class="btn" id="zenbrowse" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;" href="#">&#128279;</a></div><div class="col"><a id="zenbrowser" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenbrowserp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenbrowse" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenbrowsehtml" class="zenhtmltxt">
+    $(document).on("click", '#open_another_webview_to_navigate_url',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(["zennwebvw",["https://www.zenapproai.com?v=1","",""],"zenwjson"]));
+    });
+  </div></div>
+  <hr>
+
+  <div class="row"><div class="col"><a class="btn" id="zenvlanen" style="width:100%;background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">en</a></div><div class="col"><a id="zenvlanenr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvlanenrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvlanen" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenvlanenhtml" class="zenhtmltxt">
+
+    $(document).on("click", '#change_language_to_en',function (event) { event.preventDefault(); 
+        zenappvlan.postMessage(JSON.stringify(["zenvlanaltr","en",""]));
+    });
+  </div></div>
+  <br>
+
+  <div class="row"><div class="col"><a class="btn" id="zenvlanja" style="width:100%;background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">&#12353;</a></div><div class="col"><a id="zenvlanjar" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvlanjarp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvlanja" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenvlanjahtml" class="zenhtmltxt">
+    $(document).on("click", '#change_language_to_ja',function (event) { event.preventDefault(); 
+        zenappvlan.postMessage(JSON.stringify(["zenvlanaltr","ja",""]));
+    });
+  </div></div>
+  <br>
+
+  <div class="row"><div class="col"><a class="btn" id="zenvlans" style="width:100%;background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">zh-cn</a></div><div class="col"><a id="zenvlansr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvlansrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvlans" style="background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">&#128203;</a><br><div id="zenvlanshtml" class="zenhtmltxt">
+    $(document).on("click", '#change_language_to_zh-cn',function (event) { event.preventDefault(); 
+        zenappvlan.postMessage(JSON.stringify(["zenvlanaltr","zh-cn",""]));
+    });
+  </div></div>
+  <br>
+
+  <div class="row"><div class="col"><a class="btn" id="zenvlantt" style="width:100%;background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">zh-tw</a></div><div class="col"><a id="zenvlanttr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvlanttrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvlantt" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenvlantthtml" class="zenhtmltxt">
+    $(document).on("click", '#change_language_to_zh-tw',function (event) { event.preventDefault(); 
+        zenappvlan.postMessage(JSON.stringify(["zenvlanaltr","zh-tw",""]));
+    });
+  </div></div>
+  <br>
+  
+  <div class="row"><div class="col"><a class="btn" id="zenvlant" style="width:100%;background-color:rgba(173,215,228,0.5);border-color: black;color: red;" href="#">zh-hk</a></div><div class="col"><a id="zenvlantr" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenvlantrp" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenvlant" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenvlanthtml" class="zenhtmltxt">
+    $(document).on("click", '#change_language_to_zh-hk',function (event) { event.preventDefault(); 
+        zenappvlan.postMessage(JSON.stringify(["zenvlanaltr","zh-hk",""]));
+    });
+  </div></div>
+  <br>
+  <hr>
+  <div class="row"><div class="col"><a class="btn" id="zenrydatainit" style="width:100%;background-color:rgba(0,0,0,0.5);border-color: black;color: white;" href="#">&#10227;</a></div><div class="col"><a id="zenrydata" class="btn zenpa" style="width:100%;background-color:rgba(0,0,0,0.8);color:white" href="#">&nbsp;&nbsp;&lt;/&gt;</a></div><div class="col"></div></div>
+  <div id="zenrydatap" class="row rowv" style="padding:8px;"><a class="btn zenjscodep" ztyp="zenrydata" style="background-color:rgba(0,0,0,0.5);border-color: white;color: white;" href="#">&#128203;</a><br><div id="zenrydatahtml" class="zenhtmltxt">
+    $(document).on("click", '#user_reset_to_initial_data_of_your_APP',function (event) { event.preventDefault(); 
+        zenappja.postMessage(JSON.stringify(["zenrydata","zenjadatareinstall","zenwjson"]));
+    });
+  </div></div>
+</div></body> 
+<script> 
+$(document).on("click", '.zenpa',function (event) { event.preventDefault(); 
+   var $zenpa = $('#'+$(this).attr('id')+'p');var ztyp = $zenpa.data('ztyp');$('.rowv').hide();if(ztyp=='Y'){$zenpa.data('ztyp','').hide();}else{$zenpa.data('ztyp','Y').show();} 
+});
+$(document).on("click", '.zenjscodep',function (event) { event.preventDefault(); 
+   var ztyp = $(this).attr('ztyp')+'html';var zenhtml = $('#'+ztyp).text();
+   if(typeof zenappja === 'undefined'){navigator.clipboard.writeText(zenhtml).then(() => {alert("Text copied to clipboard!");}).catch(err => {alert('err');});}else{zenappja.postMessage(JSON.stringify(['zenpaste',[zenhtml,"",""],""]));}
+});
+$(document).on("click", '#zenyropen',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(['zenopenmnja',"","zenwjson"]));
+});
+$(document).on("click", '#zeninsertdata',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(['zeninsertplays',[[[["asset:///assets/zenja-zpio.mp3",["zenja-zpio.mp3",""],"zenjo-zenpo-plm.png?audiot=zenja-zenpo.png&audiotop=meowapp1.jpg&lyra=meowapp1.jpg",[["",""],["",""],""],["Y","","Y","Y","Y",""]],"ZENPlaylist",["",["",""],["","",""],[["2","10"],["Lyrics A for playing from start to 2s","Lyrics AA for from 2s to 10s/end"]]]],[["asset:///assets/zennja-zpio.mp3",["zennja-zpio.mp3",""],"zennjo-zenpo-plm.png",[["",""],["",""],""],["Y","","Y","Y","Y",""]],"ZENPlaylist",["",["",""],["","",""],""]]],["ZENPlaylist1",""],"",[["",""],["zennja-zenpo.png?zaudioltp=zenja-zenpo.png&zpltp=zennnja-zenpo.png",""],""],["Y","Y","Y","Y","Y"],"http://",["ZENJUDIO Playlist Inserted!",["",""],["","",""]]],"zenwjson"]));  
+});
+$(document).on("click", '#zenvalrt',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(['zenvalert',["MEOW MEOW","","MEOWSIXAPP"],"zenwjson"]));
+});
+
+$(document).on("click", '#zenvlanen',function (event) { event.preventDefault(); 
+    $('#zbx').text(' Close');localStorage.setItem('zvlan','en');try{zenappja.postMessage(JSON.stringify(['zenvlanaltr','en',""]));}catch(err){}
+});
+$(document).on("click", '#zenvlanja',function (event) { event.preventDefault(); 
+    $('#zbx').text(' 閉める');localStorage.setItem('zvlan','ja');try{zenappja.postMessage(JSON.stringify(['zenvlanaltr','ja',""]));}catch(err){}
+});
+$(document).on("click", '#zenvlans',function (event) { event.preventDefault(); 
+    $('#zbx').text(' 关闭');localStorage.setItem('zvlan','zh-cn');try{zenappja.postMessage(JSON.stringify(['zenvlanaltr','zh-cn',""]));}catch(err){}
+});
+$(document).on("click", '#zenvlantt',function (event) { event.preventDefault(); 
+    $('#zbx').text(' 關閉');localStorage.setItem('zvlan','zh-tw');try{zenappja.postMessage(JSON.stringify(['zenvlanaltr','zh-tw',""]));}catch(err){}
+});
+$(document).on("click", '#zenvlant',function (event) { event.preventDefault(); 
+    $('#zbx').text(' 關閉');localStorage.setItem('zvlan','zh-hk');try{zenappja.postMessage(JSON.stringify(['zenvlanaltr','zh-hk',""]));}catch(err){}
+});
+
+$(document).on("click", '#zenpaste',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(['zenpaste',["ZENYMD","",""],""]));
+});
+$(document).on("click", '#zenmpaste',function (event) { event.preventDefault(); 
+  zenappja.postMessage(JSON.stringify(["zenmpaste",["https://meowsixapp.github.io/zenmp/zennja-zpio.mp3?audiotitle=MeowSixZenpo&artwork=piatb-zenpo.jpeg","Audio data was copied to clipborad.\nYou need to click 'Edit Playlist' > click a playlist > click 'Add' > paste it to audio path item > save data","MeowMeow"],""]));
+});
+$(document).on("click", '#zenbrowse',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(['zennwebvw',["https://www.zenapproai.com?v=1","",""],"zenwjson"]));
+});
+
+$(document).on("click", '#zenrydatainit',function (event) { event.preventDefault(); 
+    zenappja.postMessage(JSON.stringify(["zenrydata","zenjadatareinstall","zenwjson"]));
+});
+
+$(document).on("click", '#zenjscodeopen',function (event) { event.preventDefault(); 
+    var ztyp = $('#zenjscode').data('ztyp');$('#zenjscode').css("visibility", "visible");$('.rowv').hide();
+    var ztx = ' Close';var zvlan = localStorage.getItem('zvlan');if(!zvlan || zvlan=='en'){}else if(zvlan=='ja'){ztx = ' 閉める';}else if(zvlan=='zh-cn'){ztx = ' 关闭';}else{ztx = ' 關閉';};
+    if(ztyp==''){$('#zenjscode').data('ztyp','Y').removeClass('animated zoomOut').addClass('animated zoomIn'); $(this).html('&nbsp;&nbsp;X&nbsp;&nbsp;<span id="zbx">'+ztx+'</span>');}else{$('#zenjscode').data('ztyp','').removeClass('animated zoomIn').addClass('animated zoomOut');;$(this).html('&lt;/&gt;'); }
+}); 
+$(document).ready(function(){$('#zenjscode').data('ztyp','');$('.rowv').hide();sessionStorage.setItem('yourAPP','');});
+
+</script></html> 

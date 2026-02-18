@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ZENMEOWSIX</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">	
+	<style>
+		@media all and (min-width: 768px) and (max-width: 1020px){
+			.container { width: 700px;}
+			#Nav {border-style: solid;border-color: #ffffff;}
+		}
+		@media all and (min-width: 1020px){
+			.container { width: 1020px;}
+		}
+		.btn {
+  			background: transparent;
+  			border: 2px solid #ffffff;
+  			padding: 12px 18px;
+  			transition: all 0.5s ease-in;
+		}
+		.active {background: #888888;color:hotpink;}
+	</style>
+</head>
+<body style="background: #181818;color: #787878;">
+	<div class="container">
+        <nav class="navbar navbar-expand-lg navbar-default navbar-static-top fixed-top">
+			<div class="container-fluid" style="background-color: #808080;padding:5px;" id="zenbar">
+				<div class="btn-group-vertical btn-group-sm" role="group">			<span id="zenalt" style="color:black"></span>
+  			</div>
+			</div>
+		</nav>
+		
+	<div class="btn-group" style="padding-top: 88px;">
+  	<button type="button" class="btn btn-secondary zenvdiv zenword active" id="zadd" zenword='["","新增","新增","追加"]' zdiv="adddiv">ADD</button>
+  	<button type="button" class="btn btn-secondary zenvdiv zenword" id="zlist" zenword='["","列表","列表","リスト"]' zdiv="listdiv">List</button>
+	<button type="button" class="btn btn-secondary zenvdiv zenword" id="zdata" zenword='["","樣本","样本","サンプル"]' zdiv="datadiv">Sample</button>
+	</div><br><br>
+	<div style="color:red;"><span id="adddivtln"  zenword='["","新增或修改歌詞數據","新增或修改歌词数据","歌詞データの追加または変更"]' class="zenword">Add or Amend Lyric Data</span><span id="listdivtln"  zenword='["","歌詞數據列表","歌词数据列表","歌詞データリスト"]' class="zenword">Lyric Data List</span><span id="svdatatln"  zenword='["","樣本數據","样本数据","サンプルデータ"]' class="zenword">Sample Data</span></div>
+	<div id="adddiv">
+        <br><span zenword='["","歌詞","歌词","歌詞"]' class="zenword" style="color:white">Lyric</span><br>
+		<textarea class="form-control" id="lyric"></textarea>
+        <br><span zenword='["","開始時間 [秒]","开始时间 [秒]","開始時間 [秒]"]' class="zenword" style="color:white">Starting time [s]</span><br>
+		<input type="number" value="" class="form-control" id="Startm"/>
+        e.g. 182<br><br>
+        <a href="#" zenalt='[["The lyric data output was entered into the form on previous page.","巳將產生出的特定格式歌詞數據填到上一頁的表格。","巳将产生出的特定格式歌词数据填到上一页的表格。","歌詞データは前のページの表に入力されています。"],["Only numeric values are acceptable.","須填數值。","须填数值。","必要な値。"],["Data deleted.","數據巳被刪除。","数据巳被刪除。","數據巳が除かれる。"],["","","",""]]' zenword='["","將值填到上頁的表格","将值填到上页的表格","上の表に記入してください"]' class="btn btn-sm zenword active" id="zensave" style="color:white">Add value to the previous form</a><br><br> 
+		<span id="zrm" zenword='["","註 - 在開始時間填入 123456, 再按「儲存」按鈕即可刪除這數據。","注 - 在开始时间填入 123456, 再按「储存」按钮即可删除这数据。","注意 - このデータを削除するには、開始時刻に「123456」と入力し、「保存」ボタンをクリックします。"]' style="color:hotpink" class="zenword">Note - Input 123456 into Starting time and click the 'save' button to delete this data.</span>
+	</div>
+	<div id="listdiv">
+		<div id="zenvlu"></div>
+	</div>
+	</div>				
+<hr>
+<footer>
+	<div class="container">
+		<div class="row">      
+			<div class="col-md-5 col-sm-5">
+			</div>
+		</div>
+	</div>
+</footer>
+<hr>
+<div class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6"><p></p></div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+</body></html> 
+<script>var zvword = [];var zenvlu = '';var zenrpvlu = '';var zenwvlu = [];var zenpvlu = [];var zdatn = '';var zenLyric = ["Lyric","歌詞","歌词","歌詞"];var zenStart = ['Start','開始','开始','始める'];var zenEdit = ['Edit','編輯','编辑','改訂']; 
+	$(document).ready(function() {$('#listdiv').hide();$('#listdivtln').hide();$('#svdatatln').hide();$('#zrm').hide();});
+	
+	function zenapploadFinish(zenvlan,zenvlu){
+		try{//if(zenvlan==null)zenvlan = localStorage.getItem('zenvlan');var zurl = window.location.href;if(zurl.indexOf('=')!=-1){if(zurl.indexOf('=1')!=-1){zenvlan = 'mnzen';}else if(zurl.indexOf('=2')!=-1){zenvlan = 'spzen';}else if(zurl.indexOf('=5')!=-1){zenvlan = 'jpzen';};}//if(!zenvlu)zenvlu = sessionStorage.getItem('zenjupara');zenvlu = '1###Meow Six###5###Meow Six B###355###Meow Six BB';
+		if(zenvlu){zenvlu = zenvlu.replace('zvlyr=','');$('#zdata').hide();
+        	zenrpvlu = zenvlu;zenwvlu = zenvlu.split('###');$('#zenvlu').data('zenwvlu',zenwvlu).data('zenrvlu',zenrpvlu);zenvlu = zenvlushw(zenwvlu,zenrpvlu,'Y'); 	
+		}else{$('#zenvlu').data('zenwvlu','').data('zenrvlu','');zenvlu = zenvlushw('','','Y');}
+		$('#zenvlu').html(zenvlu);
+        if(!zenvlan)zenvlan = 'engzen';var j = 0;var zvj = 0;var zword = '';
+		if(zenvlan=='mnzen'){j = 1;}else if(zenvlan=='spzen'){j = 2;}else if(zenvlan=='jpzen'){j = 3;}
+        $('#zenbar').data('ztypj',j);zenLyric = zenLyric[j];zenStart = zenStart[j];zenEdit = zenEdit[j];
+		if(j > 0){			
+            $(document).find('.zenword').each(function() { 	
+				zword = JSON.parse($(this).attr('zenword'));$(this).html(zword[j]);    ;});
+		}    ;}catch(err){;}
+	}
+	
+	$(document).on('click','.zvedit',function(event) {event.preventDefault();
+        var zj = parseInt($(this).attr('zj'));$('#zensave').data('zj',zj);var ztm = '';var zlyr = '';console.log(zenwvlu.length+ '||'+ zenpvlu.length);
+		if(zenwvlu.length){ztm = zenwvlu[(zj-1)*2];zlyr = zenwvlu[(zj-1)*2+1];}else{ztm = zenpvlu[0];zlyr = zenpvlu[1];}
+        if(zenwvlu.length || zenpvlu.length){$('#Startm').val(ztm); $('#lyric').val(zlyr);}else{$('#Startm').val(''); $('#lyric').val('');};$('#zrm').show();$('#zadd').data('zenp','Y').trigger('click');
+		;});	
+
+	$(document).on('click','.zenvdiv',function(event) {event.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });$('.zenvdiv').removeClass('active').css('color','white');var zdiv = $(this).attr('zdiv');$(this).addClass('active').css('color','pink');if(zdiv=='adddiv'){$('#adddiv').show();$('#adddivtln').show();$('#listdiv').hide();$('#listdivtln').hide();$('#svdatatln').hide();}else if(zdiv=='listdiv'){$('#adddiv').hide();$('#adddivtln').hide();$('#listdiv').show();$('#svdatatln').hide();$('#listdivtln').show();}else if(zdiv=='datadiv'){$('#adddiv').hide();$('#adddivtln').hide();$('#listdiv').show();$('#listdivtln').hide();$('#svdatatln').show();}
+	});	
+
+	$(document).on('click','#zadd',function(event) {event.preventDefault();
+		var zenp = $('#zadd').data('zenp');
+		if(zenp){$('#zadd').data('zenp','');}else{$('#zrm').hide();$('#zensave').data('zj','');$('#Startm').val(''); $('#lyric').val('');}
+    });
+
+	$(document).on('click','#zdata',function(event) {event.preventDefault();
+        var zenvlu = '1###Meow Six A###5###Meow Six BB###355###Meow Six BBB';var zenrvlu = zenvlu;if(zenwvlu)$('#zenvlu').data('zenwvlu',zenwvlu);if(zenrpvlu)$('#zenvlu').data('zenrvlu',zenrpvlu);var zenrvlu
+        zenvlu = zenvlu.split('###');zenpvlu = zenvlu;zenvlu = zenvlushw(zenvlu,zenrvlu,''); 	
+		$('#zenvlu').html(zenvlu);
+    });
+
+	$(document).on('click','#zlist',function(event) {event.preventDefault();
+        var zenvlu = $('#zenvlu').data('zenwvlu');var zenrvlu = $('#zenvlu').data('zenrvlu');$('#Startm').val(''); $('#lyric').val('');
+        if(zenvlu.length){zenvlu = zenvlushw(zenvlu,zenrvlu,'Y');
+		}else{zenvlu = zenvlushw('','','Y');} 	
+		$('#zenvlu').html(zenvlu);
+    });
+	$(document).on('click','#zensave',function(event) {event.preventDefault();
+		var zenrgbpara = [];var zj = $('#zensave').data('zj');var zvj = $('#zenbar').data('ztypj');var zenvalt = JSON.parse($(this).attr('zenalt')); zrvalt = zenvalt[0][zvj];
+        var zenvlyr = $('#lyric').val();var zentm = $('#Startm').val();
+		var zenvlu = $('#zenvlu').data('zenwvlu');
+		
+		if(zentm=='' || !/^([0-9.]*)$/.test(zentm) || zentm.split('.').length > 2){if(typeof zenappja === "undefined"){alert(zenvalt[1][zvj]);}else{zenappja.postMessage(JSON.stringify(['zenvlyric','',zenvalt[1][zvj]]));};return false;}
+
+		if(zenvlu.length){if(zentm)zentm = parseFloat(zentm);
+			if(zj!='' && zentm==123456){zenvlu.splice((zj-1)*2,2);zrvalt = zenvalt[2][zvj];}
+			else if(zj=='' && zentm > parseFloat(zenvlu[zenvlu.length-2])){zenvlu.push(zentm);zenvlu.push(zenvlyr);}
+			else if(zj!='' && parseFloat(zenvlu[(zj-1)*2])==zentm){zenvlu[(zj-1)*2+1] = zenvlyr;}
+			else{
+				if(zj)zenvlu.splice((zj-1)*2,2);
+				if(zentm <= parseFloat(zenvlu[0])){	
+					zenvlu.splice(0,0,zentm,zenvlyr);
+				}else if(zentm > parseFloat(zenvlu[zenvlu.length-2])){	
+					zenvlu.push(zentm);zenvlu.push(zenvlyr);
+				}else{var svlu = '';vlu = '';
+					for(var j=0;j<zenvlu.length;j++){
+						if(j % 2 === 0){
+							if(j==zenvlu.length-2){vlu = zentm+1;}else{vlu = parseFloat(zenvlu[j+2]);}
+							if(parseFloat(zenvlu[j]) < zentm && zentm < vlu){
+								zenvlu.splice(j+2,0,zentm,zenvlyr);break;}
+						}
+					}
+				}
+			}
+		}else{zenvlu = [zentm,zenvlyr];}
+		$('#zenvlu').data('zenwvlu',zenvlu);zenwvlu = zenvlu;var zr = '';
+		for(var j=0;j<zenvlu.length;j++){
+			if(j % 2 === 0){
+				zr = zr+zenvlu[j]+'###'+zenvlu[j+1];if(j==zenvlu.length-2){}else{zr = zr+'###';}
+			}
+		}
+		$('#zenvlu').data('zenrvlu',zr);   zdatn = 'Y';
+		if(typeof zenappja === "undefined"){alert(zrvalt);sessionStorage.setItem('zenjupara',zr);
+		}else{zenappja.postMessage(JSON.stringify(['zenvlyric',zr,zrvalt]));}
+		if(zenvlu.length){$('#zdata').hide();}else{$('#zdata').show();zdatn = '';}
+		$('#Startm').val(''); $('#lyric').val('');$('#zensave').data('zj','');$('#zlist').trigger('click');
+  	});
+function zenvlushw(zvlu,zenrvlu,ztyp){var tm = '';var tmvlu = '';var hr = '';var hrvlu = '';var tmn = '';var ts = '';var zv = '';var zr = '';var zenp = '';var zvedit = '';
+	if(zvlu){
+    for(var j=0;j<zvlu.length;j++){
+        if(j % 2 === 0){hr = '';tmn = '';ts = '';
+            tm = String(zvlu[j]).split('.');
+            if(tm[0]){tm[0] = parseInt(tm[0]);hr = tm[0]/3600;hr = String(hr).split('.');hr = parseInt(hr[0]);
+                if(hr > 1){tmn = tm[0]-3600*hr;hrvlu = hr+':';}else{hr = 0;tmn = tm[0];}
+                if(tmn > 60){tmn = tmn/60;tmn = String(tmn).split('.');tmn = parseInt(tmn[0]);ts = tm[0]-3600*hr-60*tmn;}else{tmn = 0;ts = tm[0]-3600*hr-tmn;}		            
+                if(tmn < 10){tmn = '0'+tmn+':';}else{tmn = tmn+':';}      
+                if(ts < 10)ts = '0'+ts;tmvlu = hrvlu+tmn+ts;
+            }
+            if(tm[1] > 0)tmvlu = tmvlu+'.'+tm[1];zvedit = 'zvedit';
+            tm = zvlu[j]+'<br>['+tmvlu+']';if(ztyp=='' && j > 0){zenp = '';zvedit = '';}else if(ztyp=='' && !j && zdatn!=''){zenp = '';zvedit = '';}else{zenp = '&#x270f;';};
+            zv = zv+'<tr><td>'+(j/2+1)+'</td><td>'+zvlu[j+1]+'</td><td>'+tm+'</td><td zj="'+(j/2+1)+'" class="'+zvedit+'">'+zenp+'</td>'+zr+'</tr>';
+        }
+    }
+    }else{zv = '<tr><td>1</td><td>-</td><td>-</td><td zj="1" class="zvedit">&#x270f;</td></tr>';}
+    return zenvlu = '<table style="color:pink;" class="table table-bordered table-dark"><tr><th id="zvnbr" style="width:10%;">No.</th><th id="zvlyr">'+zenLyric+'</th><th id="zvstm" style="width:10%;">'+zenStart+'</th><th id="zvedit"  style="width:10%;">'+zenEdit+'</th></tr>'+zv+'</table><span style="overflow-wrap: break-word;" id="zenrvlu">'+zenrvlu+'</span>';
+}
+</script>

@@ -1,0 +1,364 @@
+{
+  "pTitleplMenuPage": "音樂 APP 制作工具",
+  "@pTitleplMenuPage": {
+    "description": "Page Title of Playlist Menu Page"
+  },
+  "editPlaylist": "編輯播放單",
+  "@editPlaylist": {
+    "description": "Title of Edit Playlist button on Playlist Menu Page"
+  },
+  "alertNoPlaylist": "'播放單' 數據並不存在，請在 APP 的首頁進行 '播放單' 數據的插入或重裝初始數據。",
+  "@alertNoPlaylist": {
+    "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
+  },
+  "designAPPlaylist": "設計 APP 播放單",
+  "@designAPPlaylist": {
+    "description": "Title of Design Playlist button on Playlist Menu Page"
+  },
+  "appCreation": "APP 產生",
+  "@appCreation": {
+    "description": "Title of APP Creation button on Playlist Menu Page"
+  },
+  "zenRGBpara": "APP 顏色",
+  "@zenRGBpara": {
+    "description": "Title of APP Color button on Playlist Menu Page"
+  },
+  "previewAPPStartPage": "預覽 APP 首頁",
+  "@previewAPPStartPage": {
+    "description": "Title of Preview APP Starting Page button on Playlist Menu Page"
+  },
+  "okZENJudio": "OK",
+  "@okZENJudio": {
+    "description": "Title of OK button of APP Alert"
+  },
+  "confirmZENJudio": "確定",
+  "@confirmZENJudio": {
+    "description": "Title of APP Confirmation Alert"
+  },
+  "yZENJudio": "是",
+  "@yZENJudio": {
+    "description": "Title of OK button of APP Confirmation Alert"
+  },
+  "cancelAlert": "取消",
+  "@cancelAlert": {
+    "description": "Title of cancel button of APP Confirmation Alert"
+  },
+  "add": "添加",
+  "@add": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "appPlaylistYrAPP": "APP 播放單",
+  "@appPlaylistYrAPP": {
+    "description": "Title of add button on List of Playlist Page"
+  },
+  "amendPlaylistData": "修改播放單數據",
+  "@amendPlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "deletePlaylistData": "刪除播放單",
+  "@deletePlaylistData": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "toDeletePlaylist": "是否進行刪除 '播放單' ?",
+  "@toDeletePlaylist": {
+    "description": "Button title on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page"
+  },
+  "showHidePlaylistInfo": "如在 APP 首頁有提供 ‘播放單’ 的數據，您可以將數據插入成為新的列表。如在 APP 首頁有提供供複製貼上的音訊數據，您可以為 ‘播放單’ 新增更多音訊數據。\n點撃 '編輯播放單' 及播放單的標題， 您可以轉換顯示或隱藏 '播放單'。 ",
+  "@showHidePlaylistInfo": {
+    "description": "Information content of Info Icon Button on Playlist Editing Menu which is showed by clicking Playlist title on List of Playlist Page or Info Icon Button on List of Playlists"
+  },
+  "copyPLinsertData": "'播放單插入數據' 的複製",
+  "@copyPLinsertData": {
+    "description": "Copy button title of playlist inserting data on Playlist Edit Menu"
+  },
+  "copiedPLinsertData": "數據已複製。 [用於在 APP 首頁提供 '播放單' 的插入數據]",
+  "@copyPLinsertData": {
+    "description": "Playlist inserting data was copied by copy button on Playlist Edit Menu"
+  },
+  "amendPlaylistDataYrAPP": "修改播放單數據",
+  "@amendPlaylistDataYrAPP": {
+    "description": "Page title of Playlist Data Form on Amend Status"
+  },
+  "addPlaylist": "添加播放單",
+  "@addPlaylist": {
+    "description": "Page title of Playlist Data Form on Add Status"
+  },
+  "save": "儲存",
+  "@save": {
+    "description": "Title of Save Icon Button on Playlist Data Form"
+  },
+  "playlistTitle": "播放單標題 *",
+  "@playlistTitle": {
+    "description": "Item of Playlist Data Form"
+  },
+  "validPlaylistTitle": "需填值到 '播放單' 標題。",
+  "@validPlaylistTitle": {
+    "description": "Invalid result alert for item of Playlist Data Form"
+  },
+  "urlPlaylistThumbnail": "播放單縮圖的 URL",
+  "@urlPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+  "hintPlaylistThumbnail": "如在 '播放單' 的標題上添加縮圖型式的圖片，對於採用與 APP 一同封裝的圖片,需塡 assets/ 作為這值的前綴，例, assets/zenju.png, 並且按照 'APP 產生指引' 執行相關的檔案位置擺放,如檔案是存於互聯網上,需填上這檔案的 URL,例:https://www.???????.app/zenju.png。\n 如在 URL 的參數上添加 zenmd=Y,是容許 APP 使用者修改這項數據。",
+  "@hintPlaylistThumbnail": {
+    "description": "Item of Playlist Data Form"
+  },
+  "invalidThumbnailPath": "無效路徑, 請嘗試填 https:// 或 http:// 作為網路檔案的前綴值或用 assets/ 作為與 APP 一同封裝的檔案的前綴值。",
+  "@invalidThumbnailPath": {
+    "description": "Item of Playlist Data Form"
+  },
+  "insertImproperDataStructrue": "插入數據錯誤 - 數據結構不正確。",
+  "@insertImproperDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+
+  "insertImproperAudioDataStructrue": "插入數據錯誤 - 不正確音訊數據結構。",
+  "@insertImproperAudioDataStructrue": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperStructrueAudioData": "插入數據錯誤 - 音訊數據結構不正確",
+  "@insertImproperStructrueAudioData": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "insertImproperDataType": "插入數據錯誤 - 不正確數據種類",
+  "@insertImproperDataType": {
+    "description": "Error Alert of Inserting Playlist Data from Webview"
+  },
+  "restartAPP": "提供的數據已重新安裝。請重啟 APP。",
+  "@restartAPP": {
+    "description": "Request to restart APP after backup data reinstall."
+  },
+  "reinstalledData": "數據已重新安裝。",
+  "@rreinstalledData": {
+    "description": "Alert Message after backup data reinstall."
+  },
+  "relxmlnotindatafolder": "在這 APP 的外部數據檔夾 (例, com.zenapproai.meowsixapp/files) 內，未找到用於 '播放單' 數據的 zenjarydata.xml, 用於 APP 創建參數的 zenjappara.xml 或有關 APP 顏色的 zenrgbpara.xml。",
+  "@relxmlnotindatafolder": {
+    "description": "data xml file not found when backup data reinstallation."
+  },
+  "showHideAudioInfo": "對於 '音訊列表' 上的音訊的顯示或隱藏, 需點擊音訊標題。\n當點撀 '音訊列表' 上的編輯字符,如音訊數據是容許修改時，才有 '修改音訊數據' 的選項顯示 。\n如 '音訊列表' 是容許添加音訊 ，請在這頁點擊 '添加' 按鈕。",
+  "@showHideAudioInfo": {
+    "description": "Information content of Info Icon Button on Audio Editing Menu which is showed by clicking Audio title on Audio List Page or Info Icon Button on Audio List"
+  },
+  "audioDataYrAPP": "音訊數據",
+  "@audioDataYrAPP": {
+    "description": "Title of Audio List Page"
+  },
+  "amendAudiobtnData": "修改音訊數據",
+  "@amendAudiobtnData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "deleteAudioData": "刪除音訊數據",
+  "@deleteAudioData": {
+    "description": "Button Title on Audio Editing Menu"
+  },
+  "wantodeleteAudioData": "是否需删除這音訊數據?",
+  "@wantodeleteAudioData": {
+    "description": "Confirmation Box when clicking Delete Audio Data Button on Audio Editing Menu"
+  },
+  "audioInfo": "音訊資訊",
+  "@audioInfo": {
+    "description": "Audio Info Button on Audio Editing Menu"
+  },
+  "amendAudioDataYrAPP": "修改音訊數據",
+  "@amendAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "addAudioDataYrAPP": "添加音訊數據",
+  "@addAudioDataYrAPP": {
+    "description": "Title of Audio Data Form Page"
+  },
+  "audioTitle": "音訊標題*",
+  "@audioTitle": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioTitle": "需填值到音訊標題。",
+  "@invalidAudioTitle": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidPathmp": "無效路徑, 只限填 https:// 或 http:// 作為網路音檔的前綴值",
+  "@invalidPathmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidPathnmp": " 或對與 APP 一同封裝的音檔用 asset:///assets/",
+  "@invalidPathnmp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserAudioPath": "需使用 https:// 或 http:// 作為網路檔案的前綴值，例， http://www.??????.com/zenju.mp3?audioinfo=meowapp1.jpg&xhtmlbtn=Y。audioinfo 參數是關於添加音訊的網頁。",
+  "@hintuserAudioPath": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "artworkFilename": "Artwork檔名*",
+  "@artworkFilename": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidArtworkPath": "請只填寫圖像檔路徑，或當採用與音檔相同的檔名，則只需填圖像檔擴展名, 例:.png 或 .jpeg, 即音訊檔名是 zenmeow.mp3 時, Artwork 檔名就是 zenmeow.png, 這項只填 .png。",
+  "@invalidArtworkPath": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomAudio": "無效路徑，只接受網路音檔相同的域名。",
+  "@invalidArtPSamedomAudio": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPSamedomnRoot": "無效路徑值,路徑前綴值只接受以下一項\n與網路音檔相同域名\nAPP 的 assets 檔夾的根目錄或 zenp 檔夾\n asset:///assets/ [採用與 APP 一同封裝的檔案]",
+  "@invalidArtPSamedomnRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidArtPhttpRoot": "無效路徑。請嘗試採用網路檔案，值前綴填 https:// 或 http://，或APP 的 assets 檔夾的根目錄或 zenp 檔夾，當採用與 APP 一同封裝的檔案時，填寫 asset:///assets/。",
+  "@invalidArtPhttpRoot": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "hintuserArtPath": "請嘗試採用網路音檔相同域名的路徑值, 網路徑前綴必須是 https:// 或 http://。",
+  "@hintuserArtPath": {
+    "description": "Note of Audio Data Form Page"
+  },
+  "allowAmendAudioTitle": "容許修改這音訊標題",
+  "@allowAmendAudioTitle": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowAlterAudioSequence": "容許在播放單的音訊列表的排列區上修改排序",
+  "@allowAlterAudioSequence": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "allowHideAudio": "容許在播放單的 '音訊列表' 上進行音訊數據隱藏",
+  "@allowHideAudio": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintPLAudallowHide": "對相關 '播放單' 及音訊數據的隱藏及顯示, 這些功能只能在這 MeowSixAPP 的使用者部份及你的 APP 內使用而這 MeowSixAPP 的設計部份是不能使用的。",
+  "@hintPLAudallowHide": {
+    "description": "Item of Playlist Data Form"
+  },
+  "zenvlyrics": "歌詞數據",
+  "@zenvlyrics": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "invalidLyricdata": "數據值結構不正確，請參考該項的提示。",
+  "@invalidLyricdata": {
+    "description": "Item of Lyrics Data Form Page"
+  },
+  "hintYLntoAudioDataLyrics": "歌詞數據結構是播放秒值時間###該段時間的歌詞內容。需用這結構，重複歌詞數據，數據組與數據組之間亦用###串聯，例： 2###Lyrics A###6###Lyrics AA###18###Lyrics AAA。\n播放秒值時間是指歌詞出現時的播放時間秒總值。\n若合適, 在 APP 首頁會提供剪貼用的數據供 APP 使用者採用。",
+  "@hintYLntoAudioDataLyrics": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "dataLyricsT": "數據助填",
+  "@dataLyricsT": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "reminderToSaveForm": "若歌詞數據有修改，需點撀表格的儲存按鈕。",
+  "@reminderToSaveForm": {
+    "description": "Data Entry of Lyrics Data of Audio Data Form Page"
+  },
+  "confirmDataAudioDel": "音訊數據刪除的確定訊息",
+  "@confirmDataAudioDel": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "hintuserYLntoAudioDataDel": "註 - 在這項關於 '確定删除對話框' 內的信息，需填 Y 採用信息的預設值或任何信息值。\n如添加 [Ln] 到這信息, 這 [Ln] 會被預設信息取代。",
+  "@hintYLntoAudioDataDel": {
+    "description": "Hint of Audio Data Form Page"
+  },
+  "audioDataSaved": "音訊數據已儲存。",
+  "@audioDataSaved": {
+    "description": "Item of Audio Data Form Page"
+  },
+  "saveAudioForm": "儲存",
+  "@saveAudioForm": {
+    "description": "Title of Data Saving Button of Audio Data Form Page"
+  },
+  "needDesignAudioData": "需設計音訊數據。",
+  "@needDesignAudioData": {
+    "description": "Initial audio data"
+  },
+  "initialDataAudioData": "音訊數據",
+  "@initialDataAudioData": {
+    "description": "Initial audio data"
+  },
+  "sampleAudioData": "樣本",
+  "@sampleAudioData": {
+    "description": "Audio data Sample"
+  },
+  "allDataHided": "在這播放單的全部音訊數據已被隱藏。",
+  "@allDataHided": {
+    "description": "Initial audio data"
+  },
+  "noAudioDataExisting": "在這播放單是沒有音訊數據。",
+  "@noAudioDataExisting": {
+    "description": "Initial audio data"
+  },
+  "audioPath": "音訊檔路徑*",
+  "@audioPath": {
+    "description": "Item Title of Audio Data Form Page"
+  },
+  "invalidAudioPathHttp": "請用 https:// 或 http:// 作為網路音檔路徑的前綴值",
+  "@invalidAudioPathHttp": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "invalidAudioPathPackin": " 或對採用與 APP 一同封裝的音檔，填 asset:///assets/。 ",
+  "@invalidAudioPathPackin": {
+    "description": "Invalid result alert of Audio Data Form Page"
+  },
+  "addAudio": "添加",
+  "@addAudio": {
+    "description": "Title of Add Audio Button on Audio List Page"
+  },
+  "editAudioData": "編輯音訊數據",
+  "@editAudioData": {
+    "description": "Button title of Playlist Editing Menu which is showed by clicking Edit Icon Button of Audio List on Audio List Page"
+  },
+  "viewAudioData": "瀏覽音訊數據",
+  "@viewAudioData": {
+    "description": "Same button position as the above but button of View Audio Data [only show audio list] instead of button of Edit Audio Data [including edit and/or delete audio data]. "
+  },
+  "playlistPlayer": "播放單",
+  "@playlistPlayer": {
+    "description": "Title 'Playlist' on Audio Player Page"
+  },
+  "lyricsPlayer": "歌詞",
+  "@lyricsPlayer": {
+    "description": "Title 'Lyrics' on Audio Player Page"
+  },
+  "playlistDataSaved": "播放單數據巳被儲存。",
+  "@playlistDataSaved": {
+    "description": "Note of Playlist Data Form"
+  },
+  "eg": "例, ",
+  "@eg": {
+    "description": "Alert text"
+  },
+  "or": "或 ",
+  "@or": {
+    "description": "Note text"
+  },
+  "hint": "提示",
+  "@hint": {
+    "description": "Hint text"
+  },
+  "xmlCopytoClipboard": "已複製到剪貼簿。",
+  "@xmlCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "audioCopytoClipboard": "音訊數據已複製到剪貼簿,請在添加音訊的相關音訊路徑的表格項上貼上並進行數據儲存。",
+  "@audioCopytoClipboard": {
+    "description": "Alert for Copying to Clipboard"
+  },
+  "recoveryData": "是否想將 APP 重置為初始數據，以替代全部 APP 的現有數據？",
+  "@recoveryData": {
+    "description": "Recovery Data on APP Starting Page"
+  },
+  "retrvData": "您是否巳將 zenjarydata.xml、zenjappara.xml 及/或 zenrgbpara.xml 檔案放置到這 APP 數據檔夾 (例, com.zenapproai.meowsixapp/files) 內進行獲取數據，以替代全部相關 APP 的現有數據？\n註 - 這獲取數據功能並不存在於你的 APP。",
+  "@retrvData": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "retrvDatatln": "載入數據將 APP 數據重設",
+  "@retrvDatatln": {
+    "description": "Retrieve Data on APP Starting Page/Add Audio Form"
+  },
+  "alertNoPlaylistZENJu": "沒有 '播放單' 數據,需點擊 '設計 APP 播放單' 添加播放單數據到你的 APP。",
+  "@alertNoPlaylistZENJu": {
+    "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
+  },
+  "meowsixapp": "MeowSixAPP [zh]",
+  "@meowsixapp": {
+    "description": "MeowSixAPP"
+  }
+
+}
