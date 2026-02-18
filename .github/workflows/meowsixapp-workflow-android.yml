@@ -1,0 +1,65 @@
+name: MeowSixAPP-Android
+
+on: 
+    issues:
+        types: [opened]
+
+env:
+  JAVA_VERSION: "17.0.12"   
+  PROPERTIES_PATH: "./android/key.properties"
+  FLUTTER_VERSION: "3.35.5"
+  FLUTTER_CHANNEL: "stable"
+
+jobs:
+  build:
+    name: Flutter build for Meow Six APP
+    if: github.repository_owner != 'zenappro'
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{env.JAVA_VERSION}}
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: ${{env.FLUTTER_CHANNEL}}
+          flutter-version: ${{env.FLUTTER_VERSION}}
+      - name: Key.properties creation
+        run: |
+          cd zenja
+          echo keyPassword=\${{ secrets.KEYPASSWORD }} > ${{env.PROPERTIES_PATH}}
+          echo storePassword=\${{ secrets.STOREPASSWORD }} >> ${{env.PROPERTIES_PATH}}
+          echo keyAlias=\${{ secrets.KEYALIAS }} >> ${{env.PROPERTIES_PATH}}
+          echo "storeFile=../../upload-keystore.jks" >> ${{env.PROPERTIES_PATH}}
+      - name: upload-keystore.jks creation
+        run: |
+          cd zenja
+          echo "${{ secrets.UPLOAD_KEYSTORE_JKS }}" | base64 --decode > upload-keystore.jks
+      - name: APP file copying
+        run: |
+          cp -rf ${{vars.ZENVTM}}/. zenja/ 
+      - name: Build app-release.apk
+        if: vars.TYPEAPK == 'Y'
+        run: |
+          cd zenja
+          flutter pub get
+          flutter build apk --release --obfuscate --split-debug-info=build/app/outputs/symbols  
+      - name: Build app-release.aab
+        if: vars.TYPEAPK == 'N'
+        run: |
+          cd zenja
+          flutter pub get
+          flutter build appbundle --release --obfuscate --split-debug-info=build/app/outputs/symbols   
+      - name: Upload release apk artifact
+        if: vars.TYPEAPK == 'Y'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release apk
+          path: zenja/build/app/outputs/apk/release    
+      - name: Upload release appbundle artifact
+        if: vars.TYPEAPK == 'N'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release appbundle
+          path: zenja/build/app/outputs/bundle/release
