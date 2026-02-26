@@ -352,7 +352,7 @@
   "@retrvDatatln": {
     "description": "Retrieve Data on APP Starting Page/Add Audio Form"
   },
-  "alertNoPlaylistZENJu": "「Playlist」データがありません。Playlist データを APP に追加するには、「APP Playlistのデザイン」をクリックする必要があります。",
+  "alertNoPlaylistZENJu": "「Playlist」データがありません。Playlistデータを追加するには、「APPのPlaylistをデザイン」をクリックする必要があります。",
   "@alertNoPlaylistZENJu": {
     "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
   },
