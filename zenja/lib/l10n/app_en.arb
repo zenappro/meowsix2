@@ -352,7 +352,7 @@
   "@retrvDatatln": {
     "description": "Retrieve Data on APP Starting Page/Add Audio Form"
   },
-  "alertNoPlaylistZENJu": "No playlist data existing. Tap 'Design app playlist' to add playlist data for your app.",
+  "alertNoPlaylistZENJu": "No playlist data existing. Tap 'Design app playlist' to add playlist data.",
   "@alertNoPlaylistZENJu": {
     "description": "Alert content of no playlist data existing when tapping the Edit Playlist button on the Playlist Menu Page."
   },
