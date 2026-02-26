@@ -252,7 +252,7 @@
   "@confirmDataAudioDel": {
     "description": "Item of Audio Data Form Page"
   },
-  "hintuserYLntoAudioDataDel": "註 - 在這項關於 '確定删除對話框' 內的信息，需填 Y 採用信息的預設值或任何信息值。\n如添加 [Ln] 到這信息, 這 [Ln] 會被預設信息取代。",
+  "hintuserYLntoAudioDataDel": "註 - 在這項關於 '確定删除對話框' 內的訊息，需填 Y 採用訊息的預設值或任何訊息值。\n如添加 [Ln] 到這訊息, 這 [Ln] 會被預設訊息取代。",
   "@hintYLntoAudioDataDel": {
     "description": "Hint of Audio Data Form Page"
   },
@@ -352,7 +352,7 @@
   "@retrvDatatln": {
     "description": "Retrieve Data on APP Starting Page/Add Audio Form"
   },
-  "alertNoPlaylistZENJu": "沒有 '播放單' 數據,需點擊 '設計 APP 播放單' 添加播放單數據到你的 APP。",
+  "alertNoPlaylistZENJu": "沒有 '播放單' 數據,需點擊 '設計 APP 播放單' 添加播放單數據。",
   "@alertNoPlaylistZENJu": {
     "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
   },
