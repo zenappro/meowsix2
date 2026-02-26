@@ -184,7 +184,7 @@
   "@invalidPathnmp": {
     "description": "Invalid result alert of Audio Data Form Page"
   },
-  "hintuserAudioPath": "需使用 https:// 或 http:// 作为网路档案的前缀值，例， http://www.??????.com/zenju.mp3?audioinfo=meowapp1.jpg&xhtmlbtn=Y。音讯信息参数是关于添加音讯的网页。",
+  "hintuserAudioPath": "需使用 https:// 或 http:// 作为网路档案的前缀值，例， http://www.??????.com/zenju.mp3?audioinfo=meowapp1.jpg&xhtmlbtn=Y。audioinfo 参数是关于添加音讯的网页。",
   "@hintuserAudioPath": {
     "description": "Hint of Audio Data Form Page"
   },
@@ -252,7 +252,7 @@
   "@confirmDataAudioDel": {
     "description": "Item of Audio Data Form Page"
   },
-  "hintuserYLntoAudioDataDel": "注 - 在这项关于 '确定删除对话框' 内的信息，需填 Y 采用信息的预设值或任何信息值。 \n如添加 [Ln] 到这信息, 这 [Ln] 会被预设信息取代。",
+  "hintuserYLntoAudioDataDel": "注 - 在这项关于 '确定删除对话框' 内的讯息，需填 Y 采用讯息的预设值或任何讯息值。 \n如添加 [Ln] 到这讯息, 这 [Ln] 会被预设讯息取代。",
   "@hintYLntoAudioDataDel": {
     "description": "Hint of Audio Data Form Page"
   },
@@ -352,7 +352,7 @@
   "@retrvDatatln": {
     "description": "Retrieve Data on APP Starting Page/Add Audio Form"
   },
-  "alertNoPlaylistZENJu": "没有 '播放单' 数据,需点击 '设计 APP 播放单' 添加播放单数据到你的 APP, 以下的信息只会在你设计的 APP 上显示 -\n",
+  "alertNoPlaylistZENJu": "没有 '播放单' 数据,需点击 '设计 APP 播放单' 添加播放单数据。\n",
   "@alertNoPlaylistZENJu": {
     "description": "Alert content of no playlist data existing when clicking Edit Playlist button on Playlist Menu Page"
   },
